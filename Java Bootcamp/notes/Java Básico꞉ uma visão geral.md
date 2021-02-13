@@ -1,7 +1,7 @@
 ---
 title: 'Java Básico: uma visão geral'
 created: '2021-02-13T17:58:18.468Z'
-modified: '2021-02-13T18:02:49.262Z'
+modified: '2021-02-13T18:14:23.700Z'
 ---
 
 # Java Básico: uma visão geral
@@ -30,7 +30,7 @@ modified: '2021-02-13T18:02:49.262Z'
   - [Date](#date)
   - [Calendar](#calendar)
   - [DateFormat](#dateformat)
-  - [Datas no Java8](#datas-no-java8)
+  - [Datas no Java 8+](#datas-no-java8)
 - **[Trabalhando com Arrays](#trabalhando-com-arrays)**
 - **[Tratamento de Exceções](#tratamento-de-excecoes)**
 
@@ -436,19 +436,16 @@ IntStream.range(0, 5).forEach(n -> {
 
 ## Debug de código <a name="debug-de-codigo"></a>
 
-- Debug é testar o código
+Debug é testar o código, identificar e reduzir defeitos no software
 
-- Breakpoints são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
+No IntellIj
 
-- É necessário clicar em "Debug" para começar, não em "Run"
-
-- O "Resume Program" segue o programa até o próximo breakpoint
-
-- "Step Over" executa linha a linha
-
-- "Step Into" leva até a linha do método que está sendo executado
-
-- Evaluate Expression pode calcular o valor de uma variável ou expressão
+- **Breakpoints** são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
+- É necessário clicar em _Debug_ para começar, não em _Run_
+- O **Resume Program** segue o programa até o próximo breakpoint
+- **Step Over** executa linha a linha
+- **Step Into** leva até a linha do método que está sendo executado
+- **Evaluate Expression** pode calcular o valor de uma variável ou expressão
 
 ## Orientação a objetos com Java <a name="orientacao-a-objetos-com-java"></a>
 
@@ -905,7 +902,7 @@ public class Date_Format {
 }
 ~~~
 
-### Datas no Java8+ <a name="datas-no-java8"></a>
+### Datas no Java 8+ <a name="datas-no-java8"></a>
 
 O Java 8 veio com um série de melhorias com o `java.time`. Date e Calendar são mutáveis, o `java.time` é imutável
  

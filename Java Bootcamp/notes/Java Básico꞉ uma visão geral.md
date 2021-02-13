@@ -1,7 +1,11 @@
 ---
 title: 'Java Básico: uma visão geral'
 created: '2021-02-13T17:58:18.468Z'
+<<<<<<< HEAD
 modified: '2021-02-13T18:29:51.368Z'
+=======
+modified: '2021-02-13T18:14:23.700Z'
+>>>>>>> d714ffd53e0621e87c7a1bad950f74113ac94c30
 ---
 
 # Java Básico: uma visão geral
@@ -437,9 +441,15 @@ IntStream.range(0, 5).forEach(n -> {
 ## Debug de código <a name="debug-de-codigo"></a>
 
 Debug é testar o código, identificar e reduzir defeitos no software
+<<<<<<< HEAD
 
 No IntellIj
 
+=======
+
+No IntellIj
+
+>>>>>>> d714ffd53e0621e87c7a1bad950f74113ac94c30
 - **Breakpoints** são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
 - É necessário clicar em _Debug_ para começar, não em _Run_
 - O **Resume Program** segue o programa até o próximo breakpoint

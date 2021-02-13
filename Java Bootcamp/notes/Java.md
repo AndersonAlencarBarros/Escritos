@@ -3,7 +3,7 @@ attachments: [Clipboard_2021-02-09-17-29-01.png, Clipboard_2021-02-10-15-09-23.p
 tags: [java bootcamp]
 title: Java
 created: '2021-02-09T17:37:06.212Z'
-modified: '2021-02-13T01:12:09.999Z'
+modified: '2021-02-13T01:37:06.760Z'
 ---
 
 # Java
@@ -31,7 +31,7 @@ modified: '2021-02-13T01:12:09.999Z'
 
 ## Conceitos Iniciais  <a name="conceitos-iniciais"></a>   
 
-![](@attachment/Clipboard_2021-02-09-17-29-01.png)
+![](../attachments/Clipboard_2021-02-09-17-29-01.png)
 
 - **JVM (Java Virtual Machine)** é a máquina virtual que executa programas Java. A JVM remove a necessidade de compilar uma versão do software para cada SO
 - **JRE (Java Runtime Environment)** é composto pela JVM, bibliotecas e APIs da linguagem Java e outros componentes para suporte da plataforma Java. É responsável pela execução do software Java

@@ -1,11 +1,7 @@
 ---
 title: 'Java Básico: uma visão geral'
 created: '2021-02-13T17:58:18.468Z'
-<<<<<<< HEAD
 modified: '2021-02-13T18:29:51.368Z'
-=======
-modified: '2021-02-13T18:14:23.700Z'
->>>>>>> d714ffd53e0621e87c7a1bad950f74113ac94c30
 ---
 
 # Java Básico: uma visão geral

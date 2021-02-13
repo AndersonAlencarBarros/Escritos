@@ -1,9 +1,9 @@
 ---
-attachments: [Clipboard_2021-02-09-17-29-01.png, Clipboard_2021-02-10-15-09-23.png, Clipboard_2021-02-11-16-40-58.png, Clipboard_2021-02-12-16-04-43.png]
+attachments: [Clipboard_2021-02-09-17-29-01.png, Clipboard_2021-02-10-15-09-23.png, Clipboard_2021-02-11-16-40-58.png, Clipboard_2021-02-12-16-04-43.png, Clipboard_2021-02-13-09-06-37.png, Clipboard_2021-02-13-14-19-28.png]
 tags: [java bootcamp]
 title: Java
 created: '2021-02-09T17:37:06.212Z'
-modified: '2021-02-13T01:37:06.760Z'
+modified: '2021-02-13T17:51:13.687Z'
 ---
 
 # Java
@@ -28,10 +28,17 @@ modified: '2021-02-13T01:37:06.760Z'
   - [Encapsulamento, herança e polimorfismo](#encapsulamento-heranca-e-polimorfismo)
   - [Características específicas em orientação a objetos](#caracteristicas-especificas-em-orientação-a-objetos)
 - **[S.O.L.I.D](#solid)**
+- **[Trabalhando com Datas](#trabalhando-com-datas)**
+  - [Date](#date)
+  - [Calendar](#calendar)
+  - [DateFormat](#dateformat)
+  - [Datas no Java8](#datas-no-java8)
+- **[Trabalhando com Arrays](#trabalhando-com-arrays)**
+- **[Tratamento de Exceções](#tratamento-de-excecoes)**
 
 ## Conceitos Iniciais  <a name="conceitos-iniciais"></a>   
 
-![](../attachments/Clipboard_2021-02-09-17-29-01.png)
+**Java** é uma linguagem de programação e plataforma computacional lançada em 1995 pela Sun Microsystems e anos depois adquirida pela Oracle. Java é compilado para um _bytecode_ que é interpretado por uma máquina virtual (JVM).
 
 - **JVM (Java Virtual Machine)** é a máquina virtual que executa programas Java. A JVM remove a necessidade de compilar uma versão do software para cada SO
 - **JRE (Java Runtime Environment)** é composto pela JVM, bibliotecas e APIs da linguagem Java e outros componentes para suporte da plataforma Java. É responsável pela execução do software Java
@@ -39,6 +46,8 @@ modified: '2021-02-13T01:37:06.760Z'
 - **Java SE (Standard Edition)** é a distribuição mínima da plataforma de desenvolvimento de aplicações Java. OpenJDK é a implementação de referência open source da plataforma Java
 - **Java EE (Enterprise Edition)** é uma extenção da Java SE que possui suporte a desenvolvimento de sistemas corporativos
 - **Jakarta EE** com a falta de investimento da Oracle, ela cedeu o Java EE para a Eclipse Foundation, porém o nome Java EE é registrado
+
+![](../attachments/Clipboard_2021-02-09-17-29-01.png)
 
 ## Instalação <a name="instalacao"></a>
 
@@ -78,7 +87,7 @@ O mesmo para o Maven, `mvn -N io.takari:maven:wrapper`
 - Não podem ser `null`
 - Possuem valores _default_ que são usados quando se inicializa uma classe
 
-![](@attachment/Clipboard_2021-02-10-15-09-23.png)
+![](../attachments/Clipboard_2021-02-10-15-09-23.png)
 
 + São tipos primitivos
   - `int` é um valor 32 bits, $-2^{31}$ até o $2^{31} – 1$
@@ -354,7 +363,7 @@ var sb = new StringBuilder(nome);
 
 - [Operadores matemáticos, lógicos e operacionais](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
 
-![](@attachment/Clipboard_2021-02-11-16-40-58.png)
+![](../attachments/Clipboard_2021-02-11-16-40-58.png)
 
 Vale lembrar que em Java os operadores `&&` e `||` são _short circuiting_
 
@@ -537,7 +546,7 @@ public int hashCode() {
 
 S.O.L.I.D é um acrônimo dos princípios de programação orientado a objeto descritas por Robert C. Martin, Uncle Bob, que auxiliam a escrever códigos mais limpos, facilitando a refatoração e estimulando o reaproveitamento do código, mantendo a coesão e baixo acoplamento.
 
-![](@attachment/Clipboard_2021-02-12-16-04-43.png)
+![](../attachments/Clipboard_2021-02-12-16-04-43.png)
 
 - **Single Responsibility Principle** uma classe deve ter um, e somente um, motivo para mudar. 
 A classe deve possuir apenas uma única responsabilidade dentro do software.
@@ -663,3 +672,400 @@ Por exemplo, no caso de banco de dados, isolar em uma classe e abstrair para pod
     }
     ~~~
 
+## Trabalhando com Datas <a name="trabalhando-com-datas"></a>
+
+### Date <a name="date"></a>
+
+- **Construtores**
+
+~~~java
+Date()
+Date(long date)
+
+@Deprecated
+Date(int year, int month, int date)
+Date(int year, int month, int date, int hrs, int min)
+Date(int year, int month, int date, int hrs, int min, int sec)
+Date(String s)
+~~~
+
+- `Date()` aloca um objeto da classe Date e inicializará com o milissegundo mais próximo do perído de execução
+
+~~~java
+import java.util.Date;
+
+public class Data {
+  public static void main(String[] args) {
+      Date d = new Date();
+      System.out.println(d);
+      // Sat Feb 13 08:54:52 BRT 2021
+  }
+}
+~~~
+
+- `Date(long date)` espera passar os milissegundos com base padrão de tempo (epoch) que usa-se como referência.
+
+**Epoch timestamp** é padrão largamente aceito para representar uma data como um inteiro de 32 bits a partir do início do Unix Epoch
+
+~~~java
+import java.util.Date;
+
+public class Data {
+  public static void main(String[] args) {  
+    Long currentTimeMillis = System.currentTimeMillis();
+    System.out.println(currentTimeMillis);
+
+    Date data = new Date(currentTimeMillis);
+    // 1613217834717
+    System.out.println(data);
+    // Sat Feb 13 09:03:54 BRT 2021
+  }
+~~~
+
+- **Métodos**
+
+![](../attachments/Clipboard_2021-02-13-09-06-37.png)
+
+`compareTo()` retorna -1 caso a data que está dentro do parâmetro esteja no futuro, 1 caso esteja no passado e 0 se forem equivalentes
+
+~~~java
+int compareCase1 = dataNoPassado.compareTo(dataNoFuturo) // passado -> futuro
+int compareCase2 = dataNoFuturo.compareTo(dataNoPassado) // futuro -> passado
+int compareCase3 = dataNoFuturo.compareTo(mesmadataNoFuturo) // datas iguais
+
+System.out.println(compareCase1);   // -1
+System.out.println(compareCase2);   // 1
+System.out.println(compareCase3);   // 0
+~~~
+
+`Instant()` é indicado para gravar marcações temporais de eventos da aplicação
+
+~~~java 
+import java.time.Instant;
+
+public class Data {
+  public static void main(String[] args) {
+      Date d = new Date(); 
+
+      Instant instant = d.toInstant();
+      System.out.println(instant);
+      // 2021-02-13T12:22:59.421Z
+  }
+}
+
+~~~
+
+### Calendar <a name="calendar"></a>
+
+Foi necessário facilitar alguns recursos que a classe Date oferecia, por isso uma sério de métodos e construtores tornaram-se depreciados e a classe Calendar foi criada
+
+Calendar tem métodos para converter data em um instante específico e alguns campos específicos para manipulação como MONTH, YEAR, HOUR e etc
+
+~~~java  
+public class Calendario {
+  public static void main(String[] args) {
+      Calendar now = Calendar.getInstance();
+      System.out.println(now);
+      // System.out.println(now.toString().replaceAll(",", ",\n"));
+  }
+}
+~~~
+
+_Saída_
+
+    java.util.GregorianCalendar[
+      time=1613220000997, 
+      areFieldsSet=true,
+      areAllFieldsSet=true,
+      lenient=true,
+      zone=sun.util.calendar.ZoneInfo [
+        id="America/Recife",
+        offset=-10800000,
+        dstSavings=0,
+        useDaylight=false,
+        transitions=41,
+        lastRule=null
+      ],
+      firstDayOfWeek=1,
+      minimalDaysInFirstWeek=1,
+      ERA=1,YEAR=2021,MONTH=1,
+      WEEK_OF_YEAR=7,
+      WEEK_OF_MONTH=2,
+      DAY_OF_MONTH=13,
+      DAY_OF_YEAR=44,
+      DAY_OF_WEEK=7,
+      DAY_OF_WEEK_IN_MONTH=2,
+      AM_PM=0,HOUR=9,
+      HOUR_OF_DAY=9,
+      MINUTE=40,SECOND=0,
+      MILLISECOND=997,
+      ZONE_OFFSET=-10800000,
+      DST_OFFSET=0
+    ]
+
+- Manipulando Datas
+
+~~~java 
+import java.util.Calendar;
+
+public class Calendario {
+  public static void main(String[] args) {
+    Calendar now = Calendar.getInstance(); 
+
+    System.out.println("Data Atual");
+    System.out.println(now.getTime());
+
+    System.out.println("Ontem");
+    now.add(Calendar.DATE, -1);
+    System.out.println(now.getTime());
+
+    System.out.println("Mês que vem");
+    now.add(Calendar.MONTH, 1);
+    System.out.println(now.getTime());
+
+    System.out.println("Ano passado");
+    now.add(Calendar.YEAR, -1);
+    System.out.println(now.getTime());
+  }
+}
+
+~~~
+
+- Imprimindo datas e horas
+
+~~~java 
+import java.util.Calendar;
+
+public class Calendario {
+  public static void main(String[] args) {
+    Calendar now = Calendar.getInstance();  
+
+    System.out.printf("%tc\n", now);
+    // Sat Feb 13 10:14:21 BRT 2021
+    System.out.printf("%tF\n", now);
+    // 2021-02-13
+    System.out.printf("%tD\n", now);
+    // 02/13/21
+    System.out.printf("%tr\n", now);
+    // 10:14:21 AM
+    System.out.printf("%tT\n", now);
+    // 10:14:21
+
+    // Também é possível
+    // System.out.println(String.format("%tT", now));
+  }
+}
+
+~~~
+
+### DateFormat <a name="dateformat"></a>
+
+Existem duas classes para formatação de datas: **DateFormat** e **SimpleDateFormat**.
+
+~~~java  
+import java.util.Date;
+import java.text.DateFormat;
+
+public class Date_Format {
+  public static void main(String[] args) {
+    Date now = new Date();
+
+    String dateStr = DateFormat.getInstance().format(now);
+    System.out.println(dateStr);
+    // 2/13/21, 10:27 AM
+
+    dateStr = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT).format(now);
+    System.out.println(dateStr);
+    // February 13, 2021, 10:27 AM
+  }
+}
+~~~
+
+**SimpleDateFormat** traz a facilidade de definir um padrão de formatação para a saída de data que desejamos
+
+~~~java 
+
+import java.text.SimpleDateFormat;
+import java.util.Date; 
+
+public class Date_Format {
+  public static void main(String[] args) {
+    Date now = new Date(); 
+
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+    String dateFormatted = formatter.format(now);
+
+    System.out.println(dateFormatted);
+    // 13/02/2021
+
+    SimpleDateFormat hourFormatter = new SimpleDateFormat("hh:mm:ss:mmm");
+    String hrs = hourFormatter.format(now);
+
+    System.out.println(hrs);
+    // 10:37:02:037
+  }
+}
+~~~
+
+### Datas no Java8+ <a name="datas-no-java8"></a>
+
+O Java 8 veio com um série de melhorias com o `java.time`. Date e Calendar são mutáveis, o `java.time` é imutável
+ 
+- **LocalDate** representa uma data, o formatdo padrão é **yyyy-MM-dd**
+
+~~~java  
+import java.time.LocalDate;
+
+public class Time {
+  public static void main(String[] args) {
+    LocalDate hoje = LocalDate.now();
+    System.out.println(hoje);
+    // 2021-02-13
+
+    LocalDate ontem = hoje.minusDays(1);
+    System.out.println(ontem);
+    // 2021-02-12
+  }
+}
+~~~
+
+- **LocalTime** representa um padrão de horas, minutos e segundos, até nanosegundos é possível
+
+~~~java 
+import java.time.LocalTime;
+
+public class Time {
+  public static void main(String[] args) {  
+    LocalTime now = LocalTime.now();
+    System.out.println(now);
+    // 10:53:40.177684
+    
+    LocalTime maisUmaHora = now.plusHours(1);
+    System.out.println(maisUmaHora);
+    // 11:53:40.177684
+  }
+}
+~~~
+
+- **LocalDateTime** combinação de LocalTime com LocalDate, onde é possível trabalhar com datas e horas simultaneamente
+
+~~~java 
+import java.time.LocalDateTime;
+
+public class Time {
+  public static void main(String[] args) {  
+    LocalDateTime now = LocalDateTime.now();
+    System.out.println(now);
+    // 2021-02-13T10:59:21.549811
+
+    LocalDateTime futuro = now.plusHours(1).plusDays(1).plusSeconds(10);
+    System.out.println(futuro);
+    // 2021-02-14T11:59:31.549811
+  }
+}
+
+~~~
+
+## Trabalhando com Arrays <a name="trabalhando-com-arrays"></a>
+
+**Array** é uma estrutura de dados que nos permite organizar valores na memória. Apenas armazenam elementos do mesmo tipo e podem ser unidimensionais ou multidimensionais.
+
++ Características
+  * Todo Array inicia em 0
+  * Cada elemento pode ser acessado por um índice
+  * Não podem alterar seu tamanho após criadas
+
+- Declarações
+~~~java
+int arr = new int[N];
+int[] arr = {1,2,3,4,5};
+
+arr[0] = 7;
+~~~
+
+- Tamanho
+~~~java
+System.out.println(arr.length)
+~~~
+
+- Percorrendo Arrays
+
+~~~java
+for (int i = 0; i < arr.length; i++) {
+  System.out.println(arr[i]);
+}
+~~~
+
+- Arrays Multidimensionais
+
+~~~java
+int[][] mtx = {{1,2,3,4}, {5,6,7}};
+for (int i = 0; i < mtx.length; i++) {
+  for (int j = 0; j < mtx[i].length; j++) {
+      System.out.printf("%d ", mtx[i][j]);
+  }
+  System.out.println();
+}
+~~~
+
+## Tratamento de Exceções <a name="tratamento-de-excecoes"></a>
+
+Exceções são todos os erros que ocorrem durante o processamento de um método que podem ser esperados ou inesperados
+
+- `try` é onde o código deve ser executado
+
+- `catch` é o bloco do tratamento das exceções
+
+- O bloco `finally` é opcional, porém se usado é sempre executado independente se ocorrer erros ou não. Normalmente usado para liberar recursos (como fechar a conexão com o banco de dados) ou dar continuidade em um fluxo que deve acontecer independente de erros
+
+~~~java
+try { 
+  ...
+} catch (Exception e) { 
+  ...
+} finally {
+  ...            
+}
+~~~
+
+- `throw` usado para lançar uma exceção desejada junto com a mensagem de erro
+
+- `throws` é a assinatura do método que será retornado caso ocorra um erro para o método que fez a chamada
+
+~~~java
+public void abrirArquivo() {
+  try {
+      new java.io.FileInputStream("arquivo.txt");
+  } catch (java.io.FileNotFoundException e) {
+      System.out.println("Não foi possível abrir o arquivo");
+  }
+}
+~~~
+
+Toda vez que ocorre uma exceção dentro de um fluxo de processamento, sempre herdam da classe `Exception`, está classe existe justamente para capturar todo tipo de exceção que ocorre. Toda classe abaixo da `Exception` são mais específicas, podendo ser usadas para capturar erros mais esperados.
+
+![](../attachments/Clipboard_2021-02-13-14-19-28.png)
+
+- **Checked Exceptions** são exceções esperadas, cujo fluxo ou método foi preparado para receber
+
+Por exemplo, conexão com banco de dados
+
+~~~java 
+try {
+  PreparedStatement stmt = con.prepareStatement(query);
+  ...
+} catch (SQLException e) {
+  throw new AcessoADadosException("Problema na criação do Statement", e);
+}
+~~~
+
+- **Unchecked Exceptions** são exceções que não são esperadas, como a `NullPointException` quando se tenta acessar uma posição da memória inválida
+
+~~~java
+try {
+  Carro carro = new Carro();
+  carro.getPlaca();
+} catch (IntegrationException e) {
+  throw new BusinessException("Erro na criação do objeto", e);
+}
+~~~

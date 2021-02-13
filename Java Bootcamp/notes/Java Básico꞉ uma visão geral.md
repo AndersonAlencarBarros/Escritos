@@ -1,7 +1,7 @@
 ---
 title: 'Java Básico: uma visão geral'
 created: '2021-02-13T17:58:18.468Z'
-modified: '2021-02-13T18:02:49.262Z'
+modified: '2021-02-13T18:29:51.368Z'
 ---
 
 # Java Básico: uma visão geral
@@ -30,7 +30,7 @@ modified: '2021-02-13T18:02:49.262Z'
   - [Date](#date)
   - [Calendar](#calendar)
   - [DateFormat](#dateformat)
-  - [Datas no Java8](#datas-no-java8)
+  - [Datas no Java 8+](#datas-no-java8)
 - **[Trabalhando com Arrays](#trabalhando-com-arrays)**
 - **[Tratamento de Exceções](#tratamento-de-excecoes)**
 
@@ -75,6 +75,7 @@ O mesmo para o Maven, `mvn -N io.takari:maven:wrapper`
 **Criando Projetos**
 
 - [Spring Initializr](https://start.spring.io/)
+
 **Group ID** é o domínio do projeto
 **Artifact** nome do projeto
 
@@ -151,11 +152,8 @@ São objetos que representam um tipo primitivo no Java
 ### Tipagem forte e estática <a name="tipagem-forte-e-estatica"></a>
 
 - **Tipagem estática** significa que os tipos das variáveis são verificadas em tempo de compilação
-
 - **Tipagem dinâmica** os tipos são verificados em tempo de execução
-
 - **Tipagem forte** significa que após declarar o tipo de uma variável, o tipo não pode ser alterado
-
 - **Tipo inferido** é possível declarar as variáveis sem declarar o tipo, exemplo, `var n = 100`, a partir do Java 10
 
 ### Modificadores de acesso <a name="modificadores-de-acesso"></a>
@@ -271,6 +269,8 @@ Uma interface em Java é um projeto de classe, um contrato. Possui constantes es
       f.ligar();
   }
   ~~~
+
+[Diferença entre classe Abstrata e Interface](https://pt.stackoverflow.com/questions/3603/classe-abstrata-x-interface)
 
  ### Enums <a name="enums"></a>
 
@@ -436,28 +436,23 @@ IntStream.range(0, 5).forEach(n -> {
 
 ## Debug de código <a name="debug-de-codigo"></a>
 
-- Debug é testar o código
+Debug é testar o código, identificar e reduzir defeitos no software
 
-- Breakpoints são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
+No IntellIj
 
-- É necessário clicar em "Debug" para começar, não em "Run"
-
-- O "Resume Program" segue o programa até o próximo breakpoint
-
-- "Step Over" executa linha a linha
-
-- "Step Into" leva até a linha do método que está sendo executado
-
-- Evaluate Expression pode calcular o valor de uma variável ou expressão
+- **Breakpoints** são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
+- É necessário clicar em _Debug_ para começar, não em _Run_
+- O **Resume Program** segue o programa até o próximo breakpoint
+- **Step Over** executa linha a linha
+- **Step Into** leva até a linha do método que está sendo executado
+- **Evaluate Expression** pode calcular o valor de uma variável ou expressão
 
 ## Orientação a objetos com Java <a name="orientacao-a-objetos-com-java"></a>
 
 A diferença entre um **código procedural** e um **orientado a objeto** é que nos códigos procedurais escolher o melhor algoritmo é o mais importante. Já na orientação a objeto pensar no projeto de classes, como se relacionam e como serão estendidas é o que mais importa.
 
 **Classe** vai funcionar como um modelo que serve como base para construir algo
-
 **Atributos** são as características de uma classe
-
 **Métodos** são os comportamentos de uma classe
 
 ~~~java
@@ -905,7 +900,7 @@ public class Date_Format {
 }
 ~~~
 
-### Datas no Java8+ <a name="datas-no-java8"></a>
+### Datas no Java 8+ <a name="datas-no-java8"></a>
 
 O Java 8 veio com um série de melhorias com o `java.time`. Date e Calendar são mutáveis, o `java.time` é imutável
  
@@ -1027,7 +1022,6 @@ try {
 ~~~
 
 - `throw` usado para lançar uma exceção desejada junto com a mensagem de erro
-
 - `throws` é a assinatura do método que será retornado caso ocorra um erro para o método que fez a chamada
 
 ~~~java

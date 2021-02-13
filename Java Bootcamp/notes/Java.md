@@ -1,10 +1,10 @@
----
+<!---
 attachments: [Clipboard_2021-02-09-17-29-01.png, Clipboard_2021-02-10-15-09-23.png, Clipboard_2021-02-11-16-40-58.png, Clipboard_2021-02-12-16-04-43.png]
 tags: [java bootcamp]
 title: Java
 created: '2021-02-09T17:37:06.212Z'
 modified: '2021-02-13T01:37:06.760Z'
----
+-->
 
 # Java
 

@@ -67,10 +67,10 @@ public class VectorExample {
 
 Desse modo, a diferença entre ArrayList e Vector são que
 
-- Vector são sincronizados por padrão, e ArrayList não.   
+- Vector são sincronizados por padrão, e ArrayList não.
 
-  Pode-se tornar ArrayList também sincronizado passando o objeto ArrayList para o método `Collections.synchronizedList()`
-  Sincronizado significa que pode ser usado com vários threads sem qualquer efeito colateral. 
+Pode-se tornar ArrayList também sincronizado passando o objeto ArrayList para o método `Collections.synchronizedList()`
+Sincronizado significa que pode ser usado com vários threads sem qualquer efeito colateral. 
 
 - As ArrayLists aumentam em 50% do tamanho quando o espaço não é suficiente para o novo elemento, enquanto o Vector aumentará 100% do tamanho quando não houver espaço para o novo elemento de entrada.
 

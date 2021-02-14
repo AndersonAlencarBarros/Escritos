@@ -26,7 +26,7 @@ public class ArrayListExample {
 
 - `nomes.add("Anderson")` adiciona elementos
 - `Collections.sort(nomes)` ordena a lista, requer `import java.util.Collections;`
-- `nomes.set(0, "Maria") ` altera o elemento de uma posição 
+- `nomes.set(0, "Maria")` altera o elemento de uma posição 
 - `nomes.remove(2)` remove um elemento de uma dada posição
 - `nomes.remove("Anderson")` também é possível remover passando o elemento como parâmetro 
 - `nomes.get(2)` retorna o elemento da posição indexada, pode ocorrer de acessar uma posição inválida da memória
@@ -36,7 +36,7 @@ public class ArrayListExample {
 - `nomes.isEmpty()` verifica se está vazia
 - `nomes.clear()` limpa a lista
 
-Vale deixar claro que uma séria de métodos estão implementados na interface `Collections` por isso são comuns a todas as estruturas, como `size()`,` isEmpty()`, `clear() ` e etc.
+Vale deixar claro que uma séria de métodos estão implementados na interface `Collections` por isso são comuns a todas as estruturas, como `size()`,`isEmpty()`, `clear()` e etc.
 
 Para iterar sobre a lista pode-se fazer
 
@@ -81,7 +81,7 @@ Por ArrayList não ser sincronizado significa mais velocidade, por isso é sempr
 Na `java.util.LinkedList`  é onde está implementada a queue (fila)
 
 Garante uma ordem de inserção  
-Permite adição, atualização, leitura e remoção  seguindo a regra **FIFO**, o primeiro que entra é o primeiro que sai  
+Permite adição, atualização, leitura e remoção  seguindo a regra **FIFO**, o primeiro que entra é o primeiro que sai
 
 ```java
 import java.util.LinkedList;
@@ -94,7 +94,7 @@ public class QueueExample {
 }
 ```
 
-- `fila.add("João") ` adiciona elementos na fila
+- `fila.add("João")` adiciona elementos na fila
 - `fila.poll()` retorna e remove primeiro elemento
 - `fila.peek()` lê o primeiro da fila, caso a fila esteja vazia, ele retorna `null`
 - `fila.element()` retorna o primeiro elemento, porém se a fila estiver vazia, ocorre um erro de execução  `NoSuchElementException`

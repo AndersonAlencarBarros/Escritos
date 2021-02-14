@@ -28,7 +28,7 @@
 - **[Trabalhando com Arrays](#trabalhando-com-arrays)**
 - **[Tratamento de Exceções](#tratamento-de-excecoes)**
 
-## Conceitos Iniciais  <a name="conceitos-iniciais"></a>   
+## Conceitos Iniciais  <a name="conceitos-iniciais"></a>
 
 **Java** é uma linguagem de programação e plataforma computacional lançada em 1995 pela Sun Microsystems e anos depois adquirida pela Oracle. Java é compilado para um _bytecode_ que é interpretado por uma máquina virtual (JVM).
 

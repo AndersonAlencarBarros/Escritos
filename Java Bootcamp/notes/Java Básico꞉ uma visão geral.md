@@ -76,7 +76,7 @@ O mesmo para o Maven, `mvn -N io.takari:maven:wrapper`
 
 - [Spring Initializr](https://start.spring.io/)
 
-**Group ID** é o domínio do projeto
+**Group ID** é o domínio do projeto  
 **Artifact** nome do projeto
 
 ## Características da linguagem <a name="caracteristicas-da-linguagem"></a>

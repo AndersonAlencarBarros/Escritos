@@ -1,6 +1,6 @@
 # Implementando Collections e Streams com Java
 
-![Resultado de imagem para collection java](../attachments/1200px-Java.util.Collection_hierarchy.svg.png)
+![](../attachments/1200px-Java.util.Collection_hierarchy.svg.png)
 
 ## List
 

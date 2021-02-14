@@ -1,12 +1,6 @@
----
-title: 'Java Básico: uma visão geral'
-created: '2021-02-13T17:58:18.468Z'
-modified: '2021-02-13T18:29:51.368Z'
----
-
 # Java Básico: uma visão geral
 
-#### Súmario
+#### Sumário
 
 - **[Conceitos Iniciais](#conceitos-iniciais)**
 - **[Instalação](#instalacao)**
@@ -42,7 +36,7 @@ modified: '2021-02-13T18:29:51.368Z'
 - **JRE (Java Runtime Environment)** é composto pela JVM, bibliotecas e APIs da linguagem Java e outros componentes para suporte da plataforma Java. É responsável pela execução do software Java
 - **JDK (Java Development Kit)** é um conjunto de utilitários que permitem criar softwares para a plataforma Java e contém o compilador Java, bibliotecas da linguagem, ferramentas e a JRE
 - **Java SE (Standard Edition)** é a distribuição mínima da plataforma de desenvolvimento de aplicações Java. OpenJDK é a implementação de referência open source da plataforma Java
-- **Java EE (Enterprise Edition)** é uma extenção da Java SE que possui suporte a desenvolvimento de sistemas corporativos
+- **Java EE (Enterprise Edition)** é uma extensão da Java SE que possui suporte a desenvolvimento de sistemas corporativos
 - **Jakarta EE** com a falta de investimento da Oracle, ela cedeu o Java EE para a Eclipse Foundation, porém o nome Java EE é registrado
 
 ![](../attachments/Clipboard_2021-02-09-17-29-01.png)
@@ -54,7 +48,7 @@ modified: '2021-02-13T18:29:51.368Z'
 
         sudo apt install default-jre
         sudo apt install default-jdk
- 
+
 - **Gradle** 
 
         sudo snap install gradle --classic
@@ -64,7 +58,7 @@ modified: '2021-02-13T18:29:51.368Z'
         sudo apt install maven -y
 
 
-Para evitar incompatibilidades entre os desenvolvedores `grable wrapper`, gera os arquivo de _wrapper_, permitindo que todos usem a mesma versão e mantendo a consistência dos projetos. Desse modo, o `gradlew` é uma versão local do gradle, por exemplo, o comando `./gradlew -v`.
+Para evitar incompatibilidades entre os desenvolvedores `grable wrapper`, gera os arquivo de _wrapper_, permitindo que todos usem a mesma versão e mantendo a consistência dos projetos. Desse modo, o `gradlew` é uma versão local do Gradle, por exemplo, o comando `./gradlew -v`.
 
       gradle
       gradlew
@@ -76,7 +70,7 @@ O mesmo para o Maven, `mvn -N io.takari:maven:wrapper`
 
 - [Spring Initializr](https://start.spring.io/)
 
-**Group ID** é o domínio do projeto
+**Group ID** é o domínio do projeto  
 **Artifact** nome do projeto
 
 ## Características da linguagem <a name="caracteristicas-da-linguagem"></a>
@@ -96,14 +90,14 @@ O mesmo para o Maven, `mvn -N io.takari:maven:wrapper`
   - `float` é um valor com single-precision de 32 bits
   - `double`  um valor com double-precision de 64 bits
   - `char` é um valor 16 bits Unicode simples, vai do ‘\u0000’ ou 0 até o valor máximo ‘\uffff’ ou 65535
-  - `boolean` é um valor que permite apenas dois tipos de valores true e fals
+  - `boolean` é um valor que permite apenas dois tipos de valores true e false
 
 ### Wrappers <a name="wrappers"></a>
 
 São objetos que representam um tipo primitivo no Java
 
 | Tipo Primitivo | Wrapper |
-| :--: | :--: | 
+| :--: | :--: |
 | int |  Integer |
 | byte | Byte |
 | short | Short |
@@ -130,7 +124,7 @@ São objetos que representam um tipo primitivo no Java
   ~~~
 
 ### Tipos Não Primitivos <a name="tipos-nao-primitivos"></a>
- 
+
 - String
   ~~~java
   String text = "Hello World";
@@ -162,13 +156,13 @@ São responsáveis por habilitar ou não a visualização de métodos ou atribut
 
 - **public** pode ser acessada de qualquer lugar ou por qualquer entidade
 - **private** não podem ser acessados ou usados por nenhuma outra classe, ou seja, só podem ser visto pela mesma classe
-- **protected** visível para quem está no mesmo pacote ou atrávez de herança, mas só se estiver no mesmo pacote
+- **protected** visível para quem está no mesmo pacote ou através de herança, mas só se estiver no mesmo pacote
 - **default (padrão)** visível  apenas para classes do mesmo pacote
 
 
-- **abstract** não pode ser aplicado em variáveis. Classes abstratdas não podem ser instanciadas. Se algum método for abstract, a classe deve ser também. Classe abstrata significa uma ideia de uma classe 
+- **abstract** não pode ser aplicado em variáveis. Classes abstratas não podem ser instanciadas. Se algum método for abstract, a classe deve ser também. Classe abstrata significa uma ideia de uma classe 
 - **static** a variável ou método pode ser acessada no nível da classe, ou seja, sem precisar ser instanciada e presente em todas as instâncias desse objeto
-- **final** quando aplicado na classe, não permtie estender, nos métodos impede que seja sobrescrito (overriding) na subclasse e nas variáveis impede os valores de serem alterados depois que atribuídas
+- **final** quando aplicado na classe, não permite estender, nos métodos impede que seja sobrescrito (overriding) na subclasse e nas variáveis impede os valores de serem alterados depois que atribuídas
 
 ### Interfaces <a name="interfaces"></a>
 
@@ -183,7 +177,7 @@ Uma interface em Java é um projeto de classe, um contrato. Possui constantes es
       System.out.println("Ligando o Carro");
     }
   }
-  ~~~ 
+  ~~~
 
 - `Gol` implementa a interface `Carro`
   ~~~java
@@ -272,7 +266,7 @@ Uma interface em Java é um projeto de classe, um contrato. Possui constantes es
 
 [Diferença entre classe Abstrata e Interface](https://pt.stackoverflow.com/questions/3603/classe-abstrata-x-interface)
 
- ### Enums <a name="enums"></a>
+### Enums <a name="enums"></a>
 
  - É um "dicionário" de dados imutável
 
@@ -325,7 +319,7 @@ Uma interface em Java é um projeto de classe, um contrato. Possui constantes es
 
 ### Strings <a name="strings"></a>
 
-É uma sequência de caracteres e são imutáveis. Quando são alteradas de alguma forma elas criam uma novo objeto na memória e as "antigas" pedem a refeência, mas continuam lá. Nestes casos, é recomendado usar `StringBuilder` que são mutáveis.
+É uma sequência de caracteres e são imutáveis. Quando são alteradas de alguma forma elas criam uma novo objeto na memória e as "antigas" pedem a referência, mas continuam lá. Nestes casos, é recomendado usar `StringBuilder` que são mutáveis.
 
 ~~~java
 var nome = "Anderson";
@@ -421,11 +415,11 @@ IntStream.range(0, 5).forEach(n -> {
 
 - Classe: 
   - primeira letra maiúscula
-  - para nomes compostos usa-se _camelcase_, primeira letra de cada palavra maiúscula, começando com maiúscula
+  - para nomes compostos usa-se _camelCase_, primeira letra de cada palavra maiúscula, começando com maiúscula
 
 - Métodos
   - sempre minúsculos
-  - para nomes compostos usa-se _camelcase_, começando com minúsculo
+  - para nomes compostos usa-se _camelCase_, começando com minúsculo
 
 - Atributos e variáveis
   - nomes explicativos e minúsculos, sem números ou símbolos 
@@ -437,15 +431,9 @@ IntStream.range(0, 5).forEach(n -> {
 ## Debug de código <a name="debug-de-codigo"></a>
 
 Debug é testar o código, identificar e reduzir defeitos no software
-<<<<<<< HEAD
 
-No IntellIj
+No IntellIj, 
 
-=======
-
-No IntellIj
-
->>>>>>> d714ffd53e0621e87c7a1bad950f74113ac94c30
 - **Breakpoints** são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
 - É necessário clicar em _Debug_ para começar, não em _Run_
 - O **Resume Program** segue o programa até o próximo breakpoint
@@ -487,7 +475,7 @@ public Pessoa(String nome, Double altura, Double peso) {
 
 ### Encapsulamento, herança e polimorfismo <a name="encapsulamento-heranca-e-polimorfismo"></a>
 
-- **Encapsulamento** é protejer isolando as informações de uma classe. É feito mantendo os atributos `private` e acessando-os apenas por métodos definidos pela regra de negócio do projeto
+- **Encapsulamento** é proteger isolando as informações de uma classe. É feito mantendo os atributos `private` e acessando-os apenas por métodos definidos pela regra de negócio do projeto
 
 - **Herança** capacidade de uma classe de herdar o comportamento de outra. Métodos e atributos da classe pai são passadas para as classes filhos. **Composição** não deve ser usada no lugar de Herança por causa de problemas de encapsulamento: a subclasse necessita conhecer, em muitos casos, a implementação da superclasse, o que cria um acoplamento e quebra a nossa premissa básica do isolamento que vimos no encapsulamento
 
@@ -549,7 +537,7 @@ S.O.L.I.D é um acrônimo dos princípios de programação orientado a objeto de
 
 - **Single Responsibility Principle** uma classe deve ter um, e somente um, motivo para mudar. 
 A classe deve possuir apenas uma única responsabilidade dentro do software.
-Preste atenção na conjunção de adição, se a classe faz isso **e** aquilo **e** mais outra coisa, ela possívelmente está quebrando este princípio
+Preste atenção na conjunção de adição, se a classe faz isso **e** aquilo **e** mais outra coisa, ela possivelmente está quebrando este princípio
 
 - **Open Closed Principle** você deve estender um comportamento de um classe, sem modificá-lo. 
 Objetos devem estar abertos para extensão, mas fechado para modificação. 
@@ -688,7 +676,7 @@ Date(int year, int month, int date, int hrs, int min, int sec)
 Date(String s)
 ~~~
 
-- `Date()` aloca um objeto da classe Date e inicializará com o milissegundo mais próximo do perído de execução
+- `Date()` aloca um objeto da classe Date e inicializará com o milissegundo mais próximo do período de execução
 
 ~~~java
 import java.util.Date;
@@ -909,8 +897,8 @@ public class Date_Format {
 ### Datas no Java 8+ <a name="datas-no-java8"></a>
 
 O Java 8 veio com um série de melhorias com o `java.time`. Date e Calendar são mutáveis, o `java.time` é imutável
- 
-- **LocalDate** representa uma data, o formatdo padrão é **yyyy-MM-dd**
+
+- **LocalDate** representa uma data, o formatado padrão é **yyyy-MM-dd**
 
 ~~~java  
 import java.time.LocalDate;

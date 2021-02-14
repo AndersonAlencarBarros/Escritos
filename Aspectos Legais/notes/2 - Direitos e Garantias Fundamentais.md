@@ -1,13 +1,6 @@
----
-tags: [Aspectos Legais]
-title: 2 - Direitos e Garantias Fundamentais
-created: '2020-12-01T16:59:26.076Z'
-modified: '2020-12-02T13:38:33.009Z'
----
-
 # 2 - Direitos e Garantias Fundamentais
 
-De acordo com o Art. $1^\circ$ da Constituição, são seis princípios fundamentais
+De acordo com o Art. 1º da Constituição, são seis princípios fundamentais
 
 - **Soberania:** forma de expressão do poder estatal;
 - **Cidadania:** concede ao cidadão a prerrogativa de ser titular de direitos em uma sociedade;
@@ -17,9 +10,9 @@ De acordo com o Art. $1^\circ$ da Constituição, são seis princípios fundamen
 - **Pluralismo Partidário:** autoexplicativo.
 
 Dentre esses o principal fundamento de uma sociedade civilizada é a dignidade da pessoa humana. 
-O Art. $1^\circ$ é conhecido por Princípios Fundamentos do Estado Brasileiro.
+O Art. 1º é conhecido por Princípios Fundamentos do Estado Brasileiro.
 
-### Art. $3^\circ$ - Princípios Objetivos
+### Art. 3º - Princípios Objetivos
 
 - Construir uma sociedade livre, justa e solidária;
 - Erradicar a pobreza e a marginalização;
@@ -27,10 +20,9 @@ O Art. $1^\circ$ é conhecido por Princípios Fundamentos do Estado Brasileiro.
 - Garantir o desenvolvimento nacional;
 - Promover o bem de todos sem preconceito de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.
 
-Mede-se uma democracia atrávez da fixação, manutenção e proteção de garantias e direitos individuais, dessa forma, que Estados Modernos conseguem expressar o índice de liberdades públicas, assim que faz nascer a cidadania, civilidade e a dignidade da pessoa humana.
+Mede-se uma democracia através da fixação, manutenção e proteção de garantias e direitos individuais, dessa forma, que Estados Modernos conseguem expressar o índice de liberdades públicas, assim que faz nascer a cidadania, civilidade e a dignidade da pessoa humana.
 
-
-### Art. $12^\circ$ - Nacionalidade
+### Art. 12º - Nacionalidade
 
 - Define um dos elementos do Estado: o povo;
 - Há uma divisão entre os brasileiros natos e naturalizados;

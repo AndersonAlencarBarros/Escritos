@@ -1,13 +1,4 @@
----
-tags: [Aspectos Legais]
-title: 3 - Direito Tributário (Título VI - Art. 145º) (3)
-created: '2020-12-05T14:03:47.279Z'
-modified: '2020-12-05T14:28:17.439Z'
----
-
 # 3 - Direito Tributário (Título VI - Art. 145º)
-
-`Prova: Art. 145 ao 157`
 
 - Tributo é toda prestação pecuniária compulsória em moeda ou em cujo valor nela se possa exprimir, que não constitua sansão de ato ilícito constituída em lei cobrada mediante atividade administrativa plenamente vinculada;
 
@@ -17,18 +8,18 @@ modified: '2020-12-05T14:28:17.439Z'
 
 - Imposto não serve para punir um cidadão por um ato irregular, deve haver previsão legal específica para a existência daquele tributo. Só a lei pode criar ou instituir tributos, não decretos, decretos são decisões monocráticas;
 
-- O exercício da atividade tributária deve ser feito por um orgão criado por lei para exerce-la;
+- O exercício da atividade tributária deve ser feito por um órgão criado por lei para exerce-la;
 
 - Todo tributo existe uma hipótese de incidência e um fato gerador que materializa a hipótese, realizado o fato gerador nasce a obrigação tributária. 
 
-- A atividade de lançamento tributária serve para identificar corretamente o fato gerador, a data de sua ocorrência, a base tributável, o sujeito passivo e a aliquota a ser aplicada sobre aquela operação, finalizando na existência de um crédito tributário;
+- A atividade de lançamento tributária serve para identificar corretamente o fato gerador, a data de sua ocorrência, a base tributável, o sujeito passivo e a alíquota a ser aplicada sobre aquela operação, finalizando na existência de um crédito tributário;
 
-- São as especíes tributárias:
-  - **Impostos:** tributo por exelência, o Estado impõe um tributo sem causa. O imposto serve atender as dispesas do Estado, como pagamento de funcionários, obras públicas e etc;
+- São as espécies tributárias:
+  - **Impostos:** tributo por excelência, o Estado impõe um tributo sem causa. O imposto serve atender as despesas do Estado, como pagamento de funcionários, obras públicas e etc;
   - **Taxas:** está atrelado a um serviço público específico prestado ou colocado a disposição do contribuinte. Tarifa é diferente de taxa, tarifa não é tributo. Tarifa é contraprestação direta em uma relação de consumo, fiscalizada, orientada ou fixada pelo poder público competente para atendimento do interesse coletivo;
-  - **Contribuições de melhorias:** tributo bilateral só poderar ser instituido se tiver uma obra pública relevante. Deve ser pago ao ente que construiu a obra;
-  - **Contribuições sociais:** cárater solidário, como INSS, Cofins, contribuição patronal, contribuição de iluminação pública;
-  - **Emprestimos compulsórios:** compulsória de certa quantidade de dinheiro, pelo Estado ao contribuinte. São tributos restituíveis posteriormente. Pode acontecer em situaçẽos extraordinárias, como calamidades públicas, guerras ou investimento públicos relevantes `Art. 148 e 149`.
+  - **Contribuições de melhorias:** tributo bilateral só poderá ser instituído se tiver uma obra pública relevante. Deve ser pago ao ente que construiu a obra;
+  - **Contribuições sociais:** caráter solidário, como INSS, Cofins, contribuição patronal, contribuição de iluminação pública;
+  - Empréstimos compulsórios:** compulsória de certa quantidade de dinheiro, pelo Estado ao contribuinte. São tributos restituíveis posteriormente. Pode acontecer em situações extraordinárias, como calamidades públicas, guerras ou investimento públicos relevantes `Art. 148 e 149`.
 
 > Art. 153, 155, 156, incisos de 1 a 3: conhecer quais os impostos compete a cada ente federativo
 
@@ -60,7 +51,7 @@ A Constituição fixa regras para cada um desses impostos.
 
 - **Princípio da Anterioridade ou Segurança Jurídica:** é proibido cobrar tributos em relação a fatos geradores ocorridos antes do início da vigência da lei que os houver instituído ou aumentado. Não pode exigir o tributo no mesmo ano que a lei foi promulgada, deve-se esperar o próximo ano;
 
-As excessões a esses dois princípios estão nas redução e aumento de aliquotas dos impostos extrafiscais, como o imposto de exportação, importação, IPI, IOF, pois regulam a economia;
+As exceções a esses dois princípios estão nas redução e aumento de alíquotas dos impostos extrafiscais, como o imposto de exportação, importação, IPI, IOF, pois regulam a economia;
 
 - **Princípio da Isonomia:** proibido instituir tratamento desigual entre contribuintes que se encontrem em situação equivalente;
 
@@ -80,7 +71,7 @@ As excessões a esses dois princípios estão nas redução e aumento de aliquot
 
 - Proibido tributos sobre partidos políticos, entidades sindicais dos trabalhadores e instituições sem fins lucrativos;
 
-- **Princípio da Uniformidade Geográfica:** vedado a União cobrar aliquotas distintas nas diversas regiões do país;
+- **Princípio da Uniformidade Geográfica:** vedado a União cobrar alíquotas distintas nas diversas regiões do país;
 
 - **Princípio Non Olet:** dinheiro não tem cheio, mesmo que dinheiro tenha origem ilícita, se aconteceu o fato gerador deve-se pagar imposto.
 

@@ -1,12 +1,4 @@
----
-attachments: [Clipboard_2021-02-05-16-52-15.png]
-tags: [java bootcamp]
-title: 'Linux: Introdução ao sistema operacional'
-created: '2021-02-03T18:28:41.043Z'
-modified: '2021-02-09T17:38:08.901Z'
----
-
-# Linux: Introdução ao sistema operacional
+ # Linux: Introdução ao sistema operacional
 
 ## Comandos Iniciais
 
@@ -77,7 +69,7 @@ modified: '2021-02-09T17:38:08.901Z'
 ### Diretórios
 
 - `/` É o diretório raiz, todos os demais diretórios estão abaixo dele.
-- `/bin` Contém arquivos programas do sistema que são usados com freqüência pelos usuários.
+- `/bin` Contém arquivos programas do sistema que são usados com frequência pelos usuários.
 - `/boot` Arquivos estáticos e gerenciador de inicialização.
 - `/dev` Arquivos de dispositivos (periféricos).
 - `/etc` Arquivos de configuração do sistema, específicos da máquina.
@@ -86,7 +78,7 @@ modified: '2021-02-09T17:38:08.901Z'
 - `/mnt` Ponto de montagem para montar um sistema de arquivos temporariamente.
 - `/proc` Diretório virtual de informações do sistema.
 - `/root` Diretório home do usuário root.
-- `/sbin` Diretório de programas usados pelo superusuário root, para administração e controle do funcionamento do sistema.
+- `/sbin` Diretório de programas usados pelo super usuário root, para administração e controle do funcionamento do sistema.
 - `/tmp` Arquivos temporários.
 - `/usr` Contém a maior parte de seus programas. Normalmente acessível somente como leitura.
 - `/var` Dados variáveis, como: arquivos e diretórios de spool, dados de administração e login, e arquivos transitórios.
@@ -117,7 +109,7 @@ modified: '2021-02-09T17:38:08.901Z'
 
 - **Rede WAN**, Wide Area Network ou World Area Network é uma rede geograficamente distribuída.
 
-- **Rede MAN**, Metropolitan Area Network, é uma rede metropolitada que interligam várias redes locais.
+- **Rede MAN**, Metropolitan Area Network, é uma rede metropolitana que interligam várias redes locais.
 
 - **Rede LAN**, Local Area Network, é uma rede local de uma forma geral em um único prédio, uma casa ou campus.
 
@@ -166,7 +158,7 @@ Exemplo: `eth0` placa de rede ethernet, `loopback` permite fazer conexões com s
 - `cmp` compara arquivos 
 - `diff` compara arquivos e exibe o arquivo
 - `sort -n` ordena as linhas de um arquivo, em ordem numérica
-- `last reboot` exibe todas as informaçẽos de reinicialização do sistema
+- `last reboot` exibe todas as informações de reinicialização do sistema
 - `route -n` mostra todas as tabelas de roteamento IP
 - `time` mostra o tempo de um processo
 - `uptime` mostra por quanto tempo o sistema está rodando
@@ -205,15 +197,15 @@ Exemplo: `eth0` placa de rede ethernet, `loopback` permite fazer conexões com s
 
 #### Permissões
 
-As permissões são divididas em 3 partes: o dono, grupo e outros cada um com 3 caracteres. Por exemplo, `drwxr-xr-x` mostra que nessse diretório o dono tem permissão `rwx`,  o grupo `r-x` e os outros `r-x`. As letras indicam as permissões e o traço uma restrição, sendo `r` para ler, `w` para escrever e `x` para executar.
+As permissões são divididas em 3 partes: o dono, grupo e outros cada um com 3 caracteres. Por exemplo, `drwxr-xr-x` mostra que nesse diretório o dono tem permissão `rwx`,  o grupo `r-x` e os outros `r-x`. As letras indicam as permissões e o traço uma restrição, sendo `r` para ler, `w` para escrever e `x` para executar.
 
 - `ls -lh` exibe as permissões em um diretório
 
 ##### Comando `chmod <modo> <arquivo>` e o Modo Octal
 
 O comando `chmod` altera as permissões de um arquivo ou diretório, sendo possível definir permissões para cada uma das partes, o dono, grupo e outros.
- 
-![](@attachment/Clipboard_2021-02-05-16-52-15.png)
+
+![](../attachments/Clipboard_2021-02-05-16-52-15.png)
 
 - Um número é definido para cada grupo
 - 0 representa uma restrição
@@ -269,7 +261,7 @@ No Fedora,
 
 ## Shell script
 
-É uma interface de usuário para acessar os serviçõs de um sistema operacional. Script é uam linguagem de programação que executa no sistema em tempo de execução, muito usada em automação.
+É uma interface de usuário para acessar os serviços de um sistema operacional. Script é uma linguagem de programação que executa no sistema em tempo de execução, muito usada em automação.
 
 #### Variáveis de Ambiente
 

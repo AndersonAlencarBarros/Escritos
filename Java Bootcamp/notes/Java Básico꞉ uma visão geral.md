@@ -3,7 +3,7 @@
 #### Sumário
 
 - **[Conceitos Iniciais](#conceitos-iniciais)**
-- **[Instalação](#instalacao)**
+- **[Instalação (Debian, Ubuntu)](#instalacao)**
 - **[Características da linguagem](#caracteristicas-da-linguagem)**  
   - [Tipos Primitivos](#tipos-primitivos)
   - [Wrappers](#wrappers)
@@ -41,7 +41,7 @@
 
 ![](../attachments/Clipboard_2021-02-09-17-29-01.png)
 
-## Instalação <a name="instalacao"></a>
+## Instalação (Debian, Ubuntu) <a name="instalacao"></a>
 
 - **Java 11:**  [Como instalar o Java com o Apt no Ubuntu 20.04
 ](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04-pt)

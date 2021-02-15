@@ -1,6 +1,6 @@
 # Implementando Collections e Streams com Java
 
-![](../attachments/1200px-Java.util.Collection_hierarchy.svg.png)
+<img src="../attachments/1200px-Java.util.Collection_hierarchy.svg.png" style="zoom:67%;" />
 
 #### Sumário
 

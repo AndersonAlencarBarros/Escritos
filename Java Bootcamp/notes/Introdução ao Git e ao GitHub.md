@@ -1,4 +1,4 @@
- # Introdução ao Git e ao GitHub
+# Introdução ao Git e ao GitHub
 
 ## Funcionamento
 

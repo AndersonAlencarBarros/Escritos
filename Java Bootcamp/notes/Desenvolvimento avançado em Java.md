@@ -9,7 +9,7 @@
 - [Interfaces funcionais](#interfaces-funcionais)
 - [Processamento Assíncrono e Paralelo]
 - [Modularização do Java]
--  [Java 10]
+- [Java 10]
 - [ Java 11]
 
 ## Paradigma Funcional no Java <a name="paradigma-funcional-no-java"></a>

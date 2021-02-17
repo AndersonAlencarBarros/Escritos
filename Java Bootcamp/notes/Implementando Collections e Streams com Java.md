@@ -503,9 +503,7 @@ Alguns métodos dos `Optionals` são
 Traduzindo do [Javadoc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html), para realizar um cálculo, as streams são compostas de um *stream pipeline*. Um  *stream pipeline* consiste em: 
 
 - uma fonte (que pode ser uma matriz, uma coleção, uma função geradora, um canal de E/S, etc)
-
 -  zero ou mais operações intermediárias (que transformam um fluxo em outro fluxo, como `filter()` ) 
-
 - e uma operação de terminal (que produz um resultado ou efeito colateral, como `count()` ou `forEach (Consumer)`)
 
 Na `Streams` a computação nos dados de origem só é realizada quando uma operação `terminal` é iniciada e os elementos de origem são consumidos apenas conforme necessário. 

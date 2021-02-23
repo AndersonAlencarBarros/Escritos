@@ -8,9 +8,9 @@
   - [Recursividade em Java](#recursividade-em-java)
 - [Interfaces funcionais](#interfaces-funcionais)
 - [Processamento Assíncrono e Paralelo](#processamento-assincrono-e-paralelo)
-- [Modularização do Java](#)
-- [Java 10](#)
-- [Java 11](#)
+- [Modularização do Java](#modularizacao-no-java)
+- [Java 10](#java-10)
+- [Java 11](#java-11)
 
 ## Paradigma Funcional no Java <a name="paradigma-funcional-no-java"></a>
 
@@ -330,6 +330,163 @@ public static void main(String[] args) {
 }
 ```
 
-![Peek 2021-02-19 11-32](../attachments/Peek%202021-02-19%2011-32.gif)
+<img src="../attachments/Peek%202021-02-19%2011-32.gif" alt="Peek 2021-02-19 11-32" style="zoom:80%;" />
 
 Vale lembrar que a `main` é executada em uma thread diferente, então deve-se prestar atenção ao fluxo do programa ao usar multithreading.
+
+- **Execução da API do Java 8:** O problema da classe `Threads` é que não é possível retornar valores, assim, foram adicionadas as classes `Future`, `FutureTask` e `Callable`.
+
+Também é possível paralelizar e execução da `Streams` com as funções `parallel()` e `parallelStream()`. É recomendado usar apenas quando os objetos não dependam um do outro e para uma grande quantidade de objetos.
+
+O exemplo abaixo mostra a execução de um longo fatorial em paralelo e não paralelo,
+
+```java
+import java.util.stream.IntStream;
+
+public class ParallelStreams {
+    public static void main(String[] args) { 
+        long inicio;
+        long fim;
+
+        // Não Paralelo
+        inicio = System.currentTimeMillis();
+        IntStream.range(1, 100000).forEach(num -> fatorial(num));
+        fim = System.currentTimeMillis();
+        
+        System.out.println("Tempo de execução: " + (fim - inicio));
+
+        // Paralelo
+        inicio = System.currentTimeMillis();
+        IntStream.range(1, 100000).parallel().forEach(num -> fatorial(num));
+        fim = System.currentTimeMillis();
+        
+        System.out.println("Tempo de execução Paralelo: " + (fim - inicio));
+    }
+
+    public static long fatorial(long num) {
+        long fat = 1;
+
+        for (long i = 2; i <= num; i++) {
+            fat *= i;
+        }
+
+        return fat;
+    }
+}
+```
+
+É possível ver a diferença no tempo de execução,
+
+```
+Tempo de execução: 4149
+Tempo de execução Paralelo: 1409
+```
+
+Também é possível executar uma `Streams`  com o método `parallelStream()`,
+
+```java
+List<String> nomes = Arrays.asList("Anderson", "Ana", "Carlos");
+nomes.parallelStream().forEach(System.out::println);
+```
+
+## Modularização no Java <a name="modularizacao-no-java"></a>
+
+Também chamado de **Jigsaw**, a ideia por trás não é só criar um sistema de módulos, mas também aplica-lo em toda a plataforma JDK em busca de melhor organização e desempenho.
+
+Dessa forma,
+
+- diminui o acoplamento entre componentes
+- deixa claro as dependências entre os componentes
+- esconde a implementação por meio de um forte encapsulamento
+
+![img](../attachments/jdk-tr1.png)
+
+## Java 10 <a name="java-10"></a>
+
+A mudança mais vísivel no Java 10 foi a inclusão da declaração de variáveis com `var`, ou seja, onde o tipo das variáveis são inferidos.
+
+Por exemplo, se antes tinhamos
+
+```java
+URL url = new URL("http://www.oracle.com/"); 
+URLConnection conn = url.openConnection(); 
+Reader reader = new BufferedReader(
+    new InputStreamReader(conn.getInputStream()));
+```
+
+Com o `var` podemos deixar o código mais fácil de escrever, deixando o código menos verboso
+
+```java
+var url = new URL("http://www.oracle.com/"); 
+var conn = url.openConnection(); 
+var reader = new BufferedReader(
+    new InputStreamReader(conn.getInputStream()));
+```
+
+O `var` é um nome de tipo reservado, não uma palavra chave, o que significa que o código existente que usa `var` como variável, método ou nome de pacote não é afetado. No entanto, o código que usa var como uma classe ou nome de interface é afetado e a classe ou interface precisa ser renomeada.
+
+Apenas é possível usar `var` 
+
+- a nível de escopo, nunca a nível de classe
+- deve ser sempre inicializada, atribuído um valor
+- não pode ser usado como parâmetro
+- podemos usar em loops, indexadores e no try-catch-resources 
+
+## Java 11 <a name="java-11"></a>
+
+O Java 11 conta com duas novidades principais: inferência dentro das expressões lambdas e um novo cliente HTTP.
+
+Agora é possível também inferir tipos dentro das lambdas
+
+```java
+Function<Integer, Double> divisaoPor2 = (var num) -> num / 2.0;
+System.out.println(divisaoPor2.apply(10));
+```
+
+O cliente HTTP tornou-se mais moderno, suportando requisições em HTTP/2.0 que suporta requisições paralelas. 
+
+```java
+HttpRequest request = HttpRequest.newBuilder()
+        .GET().uri(URI.create("https://andersonalencarbarros.github.io/alencarbarros.github.io/"))
+        .build();
+
+// httpClient é responsável pela execução, quem faz a chamada
+HttpClient httpClient = HttpClient.newHttpClient();
+// aqui é indicado como quer receber a resposta
+HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+System.out.println(response.statusCode());
+System.out.println(response.headers());
+System.out.println(response.body());
+```
+
+Também alguns novos métodos,
+
+```java
+// Para saber se a string é nula ou vazia
+var ss = "";
+var b = ss.isBlank();
+```
+
+```java
+String html = "<html>\n<head>\n</head> \n <body>\n </body>\n</html>";
+// lines() já retorna a string separada linha por linha em uma string multilinhas
+var str = html.lines()
+        .filter(s -> s.contains("head"))
+        .collect(Collectors.joining());
+System.out.println(str);
+```
+
+```java
+// Na Collections, o método of() foi criado para declarar collections
+// e assim pode ser usado para todas as collections
+Collection<String> alfabeto = List.of("A", "B", "C", "D");
+System.out.println(alfabeto);
+```
+
+```java
+// repeat() repete uma certa quantidade de vezes
+String letra = "A";
+System.out.println(letra.repeat(10));
+```
+

@@ -435,10 +435,23 @@ Debug é testar o código, identificar e reduzir defeitos no software
 No IntellIj, 
 
 - **Breakpoints** são pontos onde a execução vai parar para testar, são os círculos vermelhos ao clicar no lado de uma linha de código
-- É necessário clicar em _Debug_ para começar, não em _Run_
+
+  <img src="../attachments/Peek%202021-02-19%2022-35-1613785006032.gif" alt="Peek 2021-02-19 22-35" style="zoom: 80%;" />
+
+  É só clicar em _Debug_ para começar.
+
 - O **Resume Program** segue o programa até o próximo breakpoint
+
+  <img src="../attachments/Peek%202021-02-19%2022-41.gif" alt="Peek 2021-02-19 22-41" style="zoom:80%;" />
+
 - **Step Over** executa linha a linha
+
+  <img src="../attachments/Peek%202021-02-19%2022-44.gif" alt="Peek 2021-02-19 22-44" style="zoom:80%;" />
+
 - **Step Into** leva até a linha do método que está sendo executado
+
+  <img src="../attachments/Peek%202021-02-19%2022-45.gif" alt="Peek 2021-02-19 22-45" style="zoom:80%;" />
+
 - **Evaluate Expression** pode calcular o valor de uma variável ou expressão
 
 ## Orientação a objetos com Java <a name="orientacao-a-objetos-com-java"></a>

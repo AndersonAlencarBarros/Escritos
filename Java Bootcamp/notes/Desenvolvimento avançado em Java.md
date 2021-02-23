@@ -6,11 +6,11 @@
   - [Conceitos fundamentais da Programação Funcional](#conceitos-fundamentais-da-programacao-funcional)
   - [Expressões Lambda no Java](#expressoes-lambda)
   - [Recursividade em Java](#recursividade-em-java)
-- [Interfaces funcionais](#interfaces-funcionais)
-- [Processamento Assíncrono e Paralelo](#processamento-assincrono-e-paralelo)
-- [Modularização do Java](#modularizacao-no-java)
-- [Java 10](#java-10)
-- [Java 11](#java-11)
+- **[Interfaces funcionais](#interfaces-funcionais)**
+- **[Processamento Assíncrono e Paralelo](#processamento-assincrono-e-paralelo)**
+- **[Modularização do Java](#modularizacao-no-java)**
+- **[Java 10](#java-10)**
+- **[Java 11](#java-11)**
 
 ## Paradigma Funcional no Java <a name="paradigma-funcional-no-java"></a>
 

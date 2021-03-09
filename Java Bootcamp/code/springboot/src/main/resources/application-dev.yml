@@ -1,0 +1,8 @@
+app:
+  message: Dev Environment
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banco
+    username: postgres
+    password: postgres

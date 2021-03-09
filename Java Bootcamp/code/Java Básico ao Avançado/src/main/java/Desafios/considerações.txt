@@ -1,0 +1,2 @@
+ > limitar a busca pelo tamanho da string
+ > ordenar o conjunto pode servir

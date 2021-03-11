@@ -1,6 +1,9 @@
 package com.teste;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculadoraTest {
@@ -11,5 +14,4 @@ class CalculadoraTest {
 
         assertEquals(3, soma);
     }
-
 }

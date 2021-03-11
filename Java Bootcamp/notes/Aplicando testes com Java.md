@@ -52,13 +52,9 @@ Mocks são objetos simulados, feitos para replicar e testar parte do comportamen
 Test Driven Development (TDD) ou Desenvolvimento Orientado por Testes orienta o desenvolvimento de software primeiro escrevendo os testes antes do código de produção.
 
 1. Escreva um teste
-
 2. Falhe no teste
-
 3. Codifique para passar no teste
-
 4. Refatore
-
 5. Repita o processo
 
 Isso colabora para escrever um código mais limpo, mais seguro já que estamos escrevendo o código que passa no teste, além de outros benefícios.

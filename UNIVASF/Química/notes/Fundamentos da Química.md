@@ -1,16 +1,6 @@
-
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-
-</script>
-
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-
-</script>
-
-
-
 # Fundamentos de Química
+
+*Anderson de Alencar Barros, 12 de março de 2021*
 
 #### Sumário
 
@@ -29,7 +19,6 @@
   - [Escalas de Comprimento](#7.2)
   - [Unidades de Medida Derivadas do SI ](#7.3)
   - [Incerteza na Medida](#7.4)
-
 
 
 ## Composição da Matéria <a name="1"></a>
@@ -108,7 +97,7 @@ A **Transformação Química** envolve uma alteração da composição da matér
 
 **Observação Macroscópica** quando a transformação química podemos enxergar e observar o resultado. 
 
-**Observação Microscópica** é o que acontece a nível molecular, ligaões são quebradas e novas ligações são formadas.
+**Observação Microscópica** é o que acontece a nível molecular, ligações são quebradas e novas ligações são formadas.
 
 ## Propriedades da Matéria <a name="5"></a>
 
@@ -152,8 +141,6 @@ Conversão entre as escalas Celsius, Kelvin e Fahrenheit.
 
 ![Conversão entre escalas termométricas - Brasil Escola](../attachments/equacao-transformacao.jpg)
 
-
-
 ### Escalas de Comprimento <a name="7.2"></a>
 
 ![image-20210312164501355](../attachments/image-20210312164501355.png)
@@ -164,10 +151,10 @@ Conversão entre as escalas Celsius, Kelvin e Fahrenheit.
 | --------- | ---------------- |
 | Volume    | m<sup>3</sup>    |
 | Densidade | g/cm<sup>3</sup> |
-| Força     | N​                |
-| Pressão   | Pa​               |
-| Energia   | J​                |
-| Trabalho  | J​                |
+| Força     | N                |
+| Pressão   | Pa               |
+| Energia   | J                |
+| Trabalho  | J                |
 
 ### Incerteza na Medida <a name="7.4"></a>
 
@@ -183,6 +170,8 @@ Os **Algarismos Significativos** contribuem para a determinação da exatidão d
 
 **Zeros à direita** são sempre significativos ou entre dois algarismos significativos.
 
-Números com **zeros ao final sem vírgula** devem ser colocados em notação científica para eliminar a ambiguidade, é o caso de 1,03 
+Números com **zeros ao final sem vírgula** devem ser colocados em notação científica para eliminar a ambiguidade, é o caso de 1,03 x 10<sup>3</sup> que tem 3 algarismos significativos.
 
-$$\frac{\sum x^2}{3}$$
+Na **adição** e **subtração**, o resultado terá a mesma quantidade de algarismos significativos que o número com a menor quantidade de dígitos.
+
+Na **multiplicação** e **divisão**, o resultado terá o número de algarismos igual a grandeza com menor número de algarismos significativos.

@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 # Fundamentos de Química
 
 #### Sumário
@@ -148,14 +151,14 @@ Conversão entre as escalas Celsius, Kelvin e Fahrenheit.
 
 ### Unidades de Medida Derivadas do SI <a name="7.3"></a>
 
-| Grandeza  | Unidade  |
-| --------- | -------- |
-| Volume    | $m^3$    |
-| Densidade | $g/cm^3$ |
-| Força     | $N$      |
-| Pressão   | $Pa$     |
-| Energia   | $J$      |
-| Trabalho  | $J$      |
+| Grandeza  | Unidade          |
+| --------- | ---------------- |
+| Volume    | m<sup>3</sup>    |
+| Densidade | g/cm<sup>3</sup> |
+| Força     | N​                |
+| Pressão   | Pa​               |
+| Energia   | J​                |
+| Trabalho  | J​                |
 
 ### Incerteza na Medida <a name="7.4"></a>
 
@@ -166,3 +169,11 @@ Toda medida tem uma incerteza por mais sofisticado que seja o aparelho. Precisã
 **Exatidão** indica a aproximação entre as medidas e valor verdadeiro. Indicado pelo erro relativo.
 
 Os **Algarismos Significativos** contribuem para a determinação da exatidão da medida.
+
+**Zeros à esquerda** nunca serão significativos.
+
+**Zeros à direita** são sempre significativos ou entre dois algarismos significativos.
+
+Números com **zeros ao final sem vírgula** devem ser colocados em notação científica para eliminar a ambiguidade, é o caso de 1,03 
+
+$$\frac{\sum x^2}{3}$$

@@ -34,6 +34,14 @@ Princípio da superposição é uma propriedade da Linearidade.
 - **Sistemas de parâmetros distribuídos** onde os parâmetros descrevem propriedades que aparecem apenas em partes do sistema ou em todo o sistema
 - **Estabilidade** se, e somente se, toda entrada limitada resultar em uma saída limitada, conhecida como **BIBO (Bounded Input Bounded Output)**
 
+## Sistemas de Controle em Malha Aberta
+
+![image-20210313104544718](../attachments/image-20210313104544718.png)
+
 ## Sistemas de Controle em Malha Fechada ou Sistemas com Realimentação
 
 A saída é medida e comparada com um valor desejado. 
+
+![image-20210313104600849](../attachments/image-20210313104600849.png)
+
+![image-20210313104623500](../attachments/image-20210313104623500.png)

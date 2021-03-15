@@ -24,7 +24,7 @@ Assim, a partir de poucos dados representativos dos sistema, é possível reprod
 
 **Sistema** é como uma coleção de entidades, por exemplo, pessoas ou máquinas, que agem e interagem juntas para a realização de algum fim lógico, ou uma relação de funcionalidade. O circuito abaixo seria o exemplo de um sistema.
 
-<img src="../attachments/TI_SN7400N.jpg" alt="Lista dos circuitos integrados da série 7400 – Wikipédia, a enciclopédia  livre" style="zoom: 33%;" />
+<img src="../attachments/TI_SN7400N.jpg" alt="Lista dos circuitos integrados da série 7400 – Wikipédia, a enciclopédia  livre" style="zoom: 25%;" />
 
 **Sistema Geral**  é aquele com o a mínima descrição possível que somente as possíveis interações com o mundo externo são retidas. Assim, é um sistema que relaciona o sistema ao mundo exterior. 
 
@@ -50,7 +50,7 @@ Simulações podem ser classificadas em:
 
 O objetivo de uma simulação de eventos discretos é representar o fluxo de pacotes através de um sistema e estudar o comportamento e o desempenho do sistema. Esse fluxo é a chegada, processamento e partida de pacotes.
 
-<img src="../attachments/Simula%C3%A7%C3%A3oDiagramas-Diagrama4.png" alt="SimulaçãoDiagramas-Diagrama4" style="zoom: 33%;" />
+<img src="../attachments/Simula%C3%A7%C3%A3oDiagramas-Diagrama4.png" alt="SimulaçãoDiagramas-Diagrama4" style="zoom: 25%;" />
 
 Variáveis derivadas dos eventos discretos:
 

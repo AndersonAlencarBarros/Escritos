@@ -1,5 +1,9 @@
 # 3 - Direito Tributário (Título VI - Art. 145º)
 
+*Anderson de Alencar Barros*
+
+
+
 - Tributo é toda prestação pecuniária compulsória em moeda ou em cujo valor nela se possa exprimir, que não constitua sansão de ato ilícito constituída em lei cobrada mediante atividade administrativa plenamente vinculada;
 
 - Atividade tributária é uma atividade essencialmente típica do Estado, o Estado não poderia existir sem o recolhimento de impostos;

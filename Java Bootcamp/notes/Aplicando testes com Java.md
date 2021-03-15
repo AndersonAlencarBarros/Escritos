@@ -1,5 +1,7 @@
 # Aplicando testes com Java
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[Testes Unitários com JUnit](#testes-unitarios-com-junit)**

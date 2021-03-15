@@ -1,4 +1,6 @@
- # Linux: Introdução ao sistema operacional
+# Linux: Introdução ao sistema operacional
+
+*Anderson de Alencar Barros*
 
 ## Comandos Iniciais
 

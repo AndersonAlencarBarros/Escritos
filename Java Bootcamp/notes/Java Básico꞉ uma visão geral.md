@@ -1,5 +1,7 @@
 # Java Básico
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[Conceitos Iniciais](#conceitos-iniciais)**

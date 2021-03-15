@@ -13,4 +13,5 @@ Está apenas começando, mas em um futuro próximo pretendo trazer as anotaçõe
   - [Introdução ao framework Spring Boot](./Java%20Bootcamp/notes/Introdu%C3%A7%C3%A3o%20ao%20framework%20Spring%20Boot.md)
   - [Aplicando testes com Java](./Java%20Bootcamp/notes/Aplicando%20testes%20com%20Java.md)
   - [Conceitos e melhores práticas com bancos de dados PostgreSQL](./Java%20Bootcamp/notes/Bancos%20de%20dados%20PostgreSQL.md)
+  - [Java JDBC Básico](./Java%20Bootcamp/notes/Java%20JDBC%20Básico.md)
   

@@ -1,5 +1,7 @@
 # Desenvolvimento avançado em Java :coffee:
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[Paradigma Funcional no Java](#paradigma-funcional-no-java)**

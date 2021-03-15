@@ -1,5 +1,9 @@
 # Representação Matemática de Sistemas
 
+*Anderson de Alencar Barros*
+
+
+
 A relação entre a saída e a entrada é chamada **Função de Transferência G(s)** do Sistema. 
 
 <img src="https://render.githubusercontent.com/render/math?math=G(s)%20=%20\frac{Y(s)}{X(s)}" alt="formula" style="zoom: 200%;" />

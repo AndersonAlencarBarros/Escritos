@@ -1,5 +1,9 @@
 # 1 - Teoria Geral do Estado
 
+*Anderson de Alencar Barros*
+
+
+
 O Direito é uma ciência normativa que acompanha a evolução da humanidade, é um fenômeno social ligado as escolhas dos indivíduos. 
 
 O Estado é formado por 3 elementos básicos: soberania, povo e território.

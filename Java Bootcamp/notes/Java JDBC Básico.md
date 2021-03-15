@@ -1,5 +1,7 @@
 # Java JDBC Básico
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[Introdução](#1)**
@@ -77,6 +79,6 @@ Existem 3 métodos para executar os comandos em SQL:
 
 - `execute` para qualquer tipo de SQL;
 - `executeQuery` para o comando *SELECT*;
-- `executeUpdate` para alteração no banco de dados, como *INSERT*, UPDATE, *DELETE*, CREATE, *ALTER*.
+- `executeUpdate` para alteração no banco de dados, como *INSERT*, *UPDATE*, *DELETE*, *CREATE*, *ALTER*.
 
 O objeto `ResultSet` contém os dados de uma dada consulta e com getters podemos ter acesso aos dados.

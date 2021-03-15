@@ -1,5 +1,7 @@
 # Implementando Collections e Streams com Java
 
+*Anderson de Alencar Barros*
+
 <img src="../attachments/1200px-Java.util.Collection_hierarchy.svg.png" style="zoom: 50%;" />
 
 #### Sumário

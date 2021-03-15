@@ -1,5 +1,7 @@
 # Conceitos e melhores práticas com bancos de dados PostgreSQL
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[Introdução](#1)**

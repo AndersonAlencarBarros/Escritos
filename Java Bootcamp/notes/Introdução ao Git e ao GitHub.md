@@ -1,5 +1,7 @@
 # Introdução ao Git e ao GitHub
 
+*Anderson de Alencar Barros*
+
 ## Funcionamento
 
 - **SHA1:** significa *Secure Hash Algorithm*, é um conjunto de funções hash criptográficas projetadas pela NSA que gera um conjunto de caracteres de 40 dígitos. É uma forma curta de representar um arquivo.

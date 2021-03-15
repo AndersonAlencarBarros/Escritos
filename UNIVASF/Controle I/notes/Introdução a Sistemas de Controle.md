@@ -1,5 +1,7 @@
 # Introdução a Sistemas de Controle
 
+*Anderson de Alencar Barros*
+
 ![image-20210302144138931](../attachments/image-20210302144138931.png)
 
 > Sistema é uma entidade que processa um conjunto de sinais, resultando em um outro conjunto de saídas.

@@ -1,5 +1,7 @@
 # Introdução ao framework Spring Boot
 
+*Anderson de Alencar Barros*
+
 #### Sumário
 
 - **[O que é o Spring Boot?](#introducao)**

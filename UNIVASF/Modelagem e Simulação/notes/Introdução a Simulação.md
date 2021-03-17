@@ -50,7 +50,7 @@ Simulações podem ser classificadas em:
 
 O objetivo de uma simulação de eventos discretos é representar o fluxo de pacotes através de um sistema e estudar o comportamento e o desempenho do sistema. Esse fluxo é a chegada, processamento e partida de pacotes.
 
-<img src="../attachments/Simula%C3%A7%C3%A3oDiagramas-Diagrama4.png" alt="SimulaçãoDiagramas-Diagrama4" style="zoom: 25%;" />
+<img src="../attachments/Simula%C3%A7%C3%A3oDiagramas-Diagrama4.png" alt="SimulaçãoDiagramas-Diagrama4" style="zoom: 50%;" />
 
 Variáveis derivadas dos eventos discretos:
 

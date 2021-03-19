@@ -1,0 +1,21 @@
+# Aplicações da Integral Dupla
+
+![image-20210318101212111](../attachments/image-20210318101212111.png)
+
+![image-20210318101614308](../attachments/image-20210318101614308.png)
+
+![image-20210318101631182](../attachments/image-20210318101631182.png)
+
+![image-20210318102157925](../attachments/image-20210318102157925.png)
+
+![image-20210318102258864](../attachments/image-20210318102258864.png)
+
+![image-20210318102551208](../attachments/image-20210318102551208.png)
+
+![image-20210318102752641](../attachments/image-20210318102752641.png)
+
+![image-20210318102939924](../attachments/image-20210318102939924.png)
+
+![image-20210318102954096](../attachments/image-20210318102954096.png)
+
+![image-20210318103541284](../attachments/image-20210318103541284.png)

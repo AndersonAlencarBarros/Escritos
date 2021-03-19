@@ -1,10 +1,16 @@
 JDBC/Aluno.java
  JDBC.Aluno
-JDBC/AlunoDAO.java
- JDBC.AlunoDAO
-JDBC/ConnectionJDBC.java
- JDBC.ConnectionJDBC
-JDBC/ConnectionFactory.java
- JDBC.ConnectionFactory
 JDBC/Main.java
  JDBC.Main
+JDBC/ConnectionJDBC.java
+ JDBC.ConnectionJDBC
+JPA/Main1.java
+ JPA.Main1
+JPA/Aluno.java
+ JPA.Aluno
+JDBC/ConnectionFactory.java
+ JDBC.ConnectionFactory
+JDBC/AlunoDAO.java
+ JDBC.AlunoDAO
+JPQL/JPQL_Example.java
+ JPQL.JPQL_Example

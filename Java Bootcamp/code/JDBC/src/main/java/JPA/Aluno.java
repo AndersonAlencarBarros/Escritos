@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Aluno {
 
     @Id     // é obrigatório, todos os objetos devem ter uma id única
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // gera um id quando for persistir a classe Aluno
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) // gera um id quando for persistir a classe Aluno
     private int id;
 
     @Column     // mapeamento das colunas
@@ -29,8 +29,7 @@ public class Aluno {
         this.estado = estado;
     }
 
-    public Aluno() {
-    }
+    public Aluno() {}
 
     public int getId() {
         return id;

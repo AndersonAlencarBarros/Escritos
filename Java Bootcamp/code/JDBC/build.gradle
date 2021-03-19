@@ -14,7 +14,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.19'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.3'
-
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.29.Final'
+    implementation group: 'org.eclipse.persistence', name: 'eclipselink', version: '3.0.0'
 }
 
 test {

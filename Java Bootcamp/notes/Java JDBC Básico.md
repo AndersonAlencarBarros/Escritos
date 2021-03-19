@@ -1,6 +1,6 @@
 # Java JDBC Básico
 
-*Anderson de Alencar Barros*
+*Anderson de Alencar Barros, 19 de março de 2021*
 
 #### Sumário
 
@@ -8,6 +8,7 @@
   - [JDBC e os drivers de conexão](#1.1)
   - [Consultas com JDBC](#1.2)
 - **[Trabalhando com JPA](#2)**
+  - [Linguagens de consulta orientada a objetos](#2.1)
 
 ## Introdução ao JDBC <a name="1"></a>
 
@@ -151,7 +152,13 @@ O objeto `ResultSet` contém os dados de uma dada consulta e com getters podemos
 
 É recomendado ter duas classes para fazer consultas no banco de dados: uma **classe espelho**, com os mesmo atributos da tabela do banco de dados e um **classe DAO,**  Data Access Object, para separar as regras de négocio das regras de acesso ao banco de dados.
 
-Vamos supor uma tabela de alunos, teremos duas classes `Aluno` e `AlunoDAO` e que cada aluno tenha atributos *id*, *nome*, *idade* e *estado*. Então a classe `Aluno` 
+Vamos supor uma tabela de alunos, teremos duas classes `Aluno` e `AlunoDAO` e que cada aluno tenha atributos *id*, *nome*, *idade* e *estado*. 
+
+A tabela no PostgreSQL fica da forma
+
+![image-20210319092821419](../attachments/image-20210319092821419.png)
+
+E a classe `Aluno` 
 
 ```java
 public class Aluno {
@@ -184,8 +191,9 @@ public class Aluno {
 
 Na classe `AlunoDAO` vamos usar a classe `ConnectionFactory` para criar conexões com o banco de dados e implementar por meio de método as regras que desejamos de acesso a ele. Vejamos exemplos
 
+Para retornar uma lista de todos os alunos no banco,
+
 ```java
-// retorna uma lista de todos os alunos no banco
 public List<Aluno> getAlunosList() {
     List<Aluno> alunos = new ArrayList<>();
 	
@@ -228,8 +236,9 @@ List<Aluno> alunos = alunoDAO.getAlunosList();
 alunos.stream().forEach(System.out::println);
 ```
 
+Retornar os dados de um aluno pelo `id`,
+
 ```java
-// retornar os dados de um aluno pelo id
 public Aluno getAlunosByID(int id) {
     Aluno aluno = new Aluno();
     try(var conn = ConnectionFactory.getConnection()) {
@@ -261,8 +270,9 @@ Aluno aluno = alunoDAO.getAlunosByID(4);
 System.out.println(aluno);
 ```
 
+Inserir um aluno no banco,
+
 ```java
-// inserir um aluno no banco
 public void inserirAluno(Aluno aluno) {
 	try(var conn = ConnectionFactory.getConnection()) {
         String sql = "INSERT INTO aluno(nome, idade, estado) VALUES (?, ?, ?)";
@@ -287,8 +297,9 @@ Aluno alunoTemp = new Aluno("Anderson", 23, "PE");
 alunoDAO.inserirAluno(alunoTemp);
 ```
 
+Remover um aluno pelo `id`,
+
 ```java
-// remover um aluno pelo id
 public void deletarAluno(int id) {
     try(var conn = ConnectionFactory.getConnection()) {
         String sql = "DELETE FROM aluno WHERE id = ?";
@@ -305,8 +316,9 @@ public void deletarAluno(int id) {
 }
 ```
 
+Atualizar os dados de um aluno pelo `id`,
+
 ```java
-// atualizar os dados de um aluno pelo id
 public void atualizarAluno(int id) {
     try(var conn = ConnectionFactory.getConnection()) {
         String sql = "UPDATE aluno SET nome = 'Anderson Alencar' WHERE id = ?";
@@ -331,7 +343,7 @@ Pensando neste último problema, foi criado o **Mapeamento Objeto Relacional (OR
 
 Desse modo, o JPA fornece uma interface comum, porém cada implementação pode pode resolver um problema de forma diferente, mas seguindo certas restrições, sendo possível manter o código independente da implementação e ajudando a abstrair o código.
 
- ![image-20210316224133427](../attachments/image-20210316224133427.png)
+![image-20210316224133427](../attachments/image-20210316224133427.png)
 
 ![image-20210316224204030](../attachments/image-20210316224204030.png)
 
@@ -342,3 +354,215 @@ Desse modo, o JPA fornece uma interface comum, porém cada implementação pode 
 ![image-20210316224421250](../attachments/image-20210316224421250.png)
 
 ![image-20210316224454462](../attachments/image-20210316224454462.png)
+
+![image-20210317173603181](../attachments/image-20210317173603181.png)
+
+![image-20210317173753752](../attachments/image-20210317173753752.png)
+
+Para os exemplos abaixo foi usado o **Hibernate** como implemenação do JPA e para instalar foi usado os comandos nas dependências do Gradle para instalar o Hibernate e o JPA
+
+```java
+implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.3'
+implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.29.Final'
+```
+
+Voltando ao código da classe `Aluno`, mapeamos os atributos para as colunas da tabela
+
+```java
+import javax.persistence.*;
+
+@Entity     // mapeia uma tabela para uma classe
+public class Aluno {
+
+    @Id     // é obrigatório, todos os objetos devem ter uma id única, uma chave primária
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) // gera um id quando for persistir a classe Aluno
+    private int id;
+
+    @Column     // mapeamento das colunas
+    private String nome;
+    @Column
+    private int idade;
+    @Column
+    private String estado;
+
+    // construtores, getters e setters...
+}
+```
+
+Precisamos configurar a persistência por meio de um arquivo `persistence.xml` na pasta `resources/META-INF`
+
+```xaml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <!-- Unidade de persistência. Deve ser lembrado, pois será usado no código -->
+    <persistence-unit name="part1-DIO">
+
+        <description> Unidade de persistência do tutorial básico de JPA da Digital Innovation One sem implementacoes</description>
+
+        <!-- Especifica quem implementa o JPA-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Classes (entidades) que serao mapeadas -->
+        <class>JPA.Aluno</class>
+
+        <!-- Configuracoes de conexao ao banco de dados -->
+        <properties>
+            <!-- Configuracoes do banco de dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/dio" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="12345" />
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+
+            <!-- Configuracoes do Hibernate (os parametros so sao reconhecidos se estiver usando a implementacao do Hibernate)-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <!-- Deve-se tomar cuidado com essa configuração 'create', ela deleta a tabela a cada execução e deve ser usada somente para desenvolvimento. O ideal seria validate -->
+            <property name="hibernate.hbm2ddl.auto" value="create" />  <!-- Possible values for hibernate.hbm2ddl.auto are: validate, update, create, create-drop -->
+        </properties>
+
+    </persistence-unit>
+</persistence>
+```
+
+Para iniciar o `EntityManager` e carregar o arquivo `persistence.xml`, fazemos
+
+```java
+//import javax.persistence.EntityManager;
+//import javax.persistence.EntityManagerFactory;
+//import javax.persistence.Persistence;
+
+EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("part1-DIO");
+EntityManager entityManager = entityManagerFactory.createEntityManager();
+```
+
+Com as configurações feitas, podemos agora persistir os dados no banco. Vale lembrar que para alterar os dados com essa interface precisamos sempre de uma transação. Suponha alguns objetos da classe `Aluno`,
+
+```java
+Aluno alunoParaAdicionar1 = new Aluno("Daniel", 29, "SP");
+Aluno alunoParaAdicionar2 = new Aluno("Carlos", 10, "AC");
+Aluno alunoParaAdicionar3 = new Aluno("Anderson", 23, "PE");
+```
+
+Para adicionar no banco,
+
+```java
+entityManager.getTransaction().begin();	// inicia a transação
+
+entityManager.persist(alunoParaAdicionar1);
+entityManager.persist(alunoParaAdicionar2);
+entityManager.persist(alunoParaAdicionar3);
+
+entityManager.getTransaction().commit(); // termina a transação
+```
+
+Para ler instâncias do banco,
+
+```java
+// perceba como não é preciso uma transação, pois nenhum dado é alterado
+Aluno alunoEncontrado = entityManager.find(Aluno.class, 3);
+System.out.println(alunoEncontrado);
+```
+
+Alterar uma entidade,
+
+```java
+entityManager.getTransaction().begin();
+
+alunoEncontrado.setNome("Karam");
+alunoEncontrado.setIdade(20);
+
+entityManager.getTransaction().commit();
+```
+
+Remover uma entidade,
+
+```java
+entityManager.getTransaction().begin();
+
+entityManager.remove(alunoEncontrado);
+
+entityManager.getTransaction().commit();
+```
+
+E para fechar a conexão,
+
+```java
+entityManager.close();
+entityManagerFactory.close();
+```
+
+### Linguagens de consulta orientada a objetos (JPQL) <a name="2.1"></a>
+
+![image-20210317225330165](../attachments/image-20210317225330165.png)
+
+![image-20210317225514700](../attachments/image-20210317225514700.png)
+
+![image-20210317225629721](../attachments/image-20210317225629721.png)
+
+Vamo lembrar que existem também o **JPA Criteria API**, porém este é mais complexo e pouco usado.
+
+Aqui, usarei JPQL e SQL Nativo para exemplificar.
+
+Inicialmente, vamos instanciar alguns dados,
+
+```java
+EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("part1-DIO");
+EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+entityManager.getTransaction().begin();
+
+entityManager.persist(new Aluno("Daniel", 29, "PE"));
+entityManager.persist(new Aluno("Anderson", 23, "PE"));
+entityManager.persist(new Aluno("Joao", 20, "GO"));
+entityManager.persist(new Aluno("Pedro", 30, "AC"));
+
+entityManager.getTransaction().commit();
+```
+
+Usando o método `find()` do `entityManager`, temos
+
+```java
+// traz somente um resultado, não é possível trazer uma lista de alunos
+Aluno alunoEntityManager = entityManager.find(Aluno.class, 1);
+```
+
+Usando SQL Nativo é possível realizar consultas mais complexas
+
+```java
+// Trazendo somente 1 resultado
+String sql = "SELECT * FROM Aluno WHERE nome = :nome ";
+Aluno alunoSQL = (Aluno) entityManager
+    .createNativeQuery(sql, Aluno.class)
+    .setParameter("nome", nome)
+    .getSingleResult();
+
+// Trazendo uma lista como resultado
+String sqlList = "SELECT * FROM Aluno";
+List<Aluno> alunoSQLList = entityManager
+    .createNativeQuery(sqlList, Aluno.class)
+    .getResultList();
+```
+
+E o mesmo é possível com JPQL, que abstrai a linguagem SQL e mesmo trocando o banco, a linguagem JPQL se mantém
+
+```java
+// Trazendo somente 1 resultado
+String jpql = "select a from Aluno a where a.nome = :nome";
+Aluno alunoJPQL = entityManager
+    .createQuery(jpql, Aluno.class)
+    .setParameter("nome", nome)
+    .getSingleResult();
+
+// Trazendo uma lista como resultado
+String jpqlList = "select a from Aluno a where a.estado = :estado";
+List<Aluno> alunoJPQLList = entityManager
+    .createQuery(jpqlList, Aluno.class)
+    .setParameter("estado", "PE")
+    .getResultList();
+```
+

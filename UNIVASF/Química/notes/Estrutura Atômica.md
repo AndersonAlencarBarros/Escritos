@@ -34,11 +34,15 @@ A representação de um elemento químico é dado na forma,
 
 O **número de massa** (A) é a quantidade de partículas no número: A = Z + N.
 
-A **massa atômica** é a média de massa de todos os isótopos de ocorrência natural. 
+A **massa atômica** é a média ponderada de massa de todos os isótopos de ocorrência natural. 
+
+![image-20210319102159952](../attachments/image-20210319102159952.png)
 
 A **massa molecular** é a soma das massas dos átomos de uma molécula.
 
-Resumindo...
+![image-20210319102232642](../attachments/image-20210319102232642.png)
+
+### Resumindo...
 
 ![image-20210313094814359](../attachments/image-20210313094814359.png)
 

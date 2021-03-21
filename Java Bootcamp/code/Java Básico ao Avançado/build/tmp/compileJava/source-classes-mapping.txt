@@ -14,8 +14,6 @@ Date/Data.java
  Date.Data
 Streams/StreamsExample.java
  Streams.StreamsExample
-Desafios/MinhaPrimeiraClasse.java
- MinhaPrimeiraClasse
 Interfaces/Carro.java
  Interfaces.Carro
 Desafios/Desafio3.java
@@ -70,10 +68,14 @@ MultiThreading/MultiThreading.java
  MultiThreading.BarradeCarregamento
  MultiThreading.GeradorPDF
  MultiThreading.MultiThreading
+Desafios/Desafio5.java
+ Desafio5
 Java10/Main.java
  Java10.Main
 Calendar/Time.java
  Calendar.Time
+DIP/MySqlConnection.java
+ DIP.MySqlConnection
 Java11/InferenciaLambda.java
  Java11.InferenciaLambda
 Interfaces/Veiculo.java
@@ -106,6 +108,8 @@ ParadigmaFuncional/ConsumerExample.java
  ParadigmaFuncional.ConsumerExample
 Interfaces/Programa.java
  Interfaces.Programa
+Desafios/DesafioAritmeticoUm.java
+ DesafioAritmeticoUm
 OpenClose/Main.java
  OpenClose.Main
 Enums/Status.java
@@ -117,6 +121,8 @@ ParadigmaFuncional/FunctionExample.java
 ParadigmaFuncional/FuncaoAltaOrdem.java
  ParadigmaFuncional.Calculo
  ParadigmaFuncional.FuncaoAltaOrdem
+Desafios/DesafioAritmeticoDois.java
+ DesafioAritmeticoDois
 Desafios/Desafio1.java
  Desafios.Desafio1
  Desafios.Desafio1$1
@@ -136,5 +142,5 @@ Collections/QueueExample.java
  Collections.QueueExample
 OpenClose/ControladorDeDesconto.java
  OpenClose.ControladorDeDesconto
-DIP/MySqlConnection.java
- DIP.MySqlConnection
+Desafios/minhaClasse.java
+ minhaClasse

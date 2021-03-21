@@ -27,15 +27,3 @@ Turing discute várias objeções sobre sua proposta:
 - **Humanos não são um sistema discreto** fala que o sistema nervoso, ao contrário de uma máquina, é sensível e contínuo. 
 
   Turing fala que o computador poder simular qualquer sistema com métodos matemáticos de aproximação.
-
-
-
-**Robô Seletor de Peças**
-
-P -> % de peças selecionadas corretamente  / taxa por minuto / respeitando normas de qualidade do produto
-
-E -> fábrica / esteira / as peças em si 
-
-A -> braço robótico / uma garra
-
-S -> câmeras 

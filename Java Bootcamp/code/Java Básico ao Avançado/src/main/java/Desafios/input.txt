@@ -1,8 +1,1 @@
-3
-abc
-dae
-abcde
-2
-abc
-def
-0
+2 12 8 2

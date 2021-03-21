@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MinhaPrimeiraClasse {
+public class Desafio5 {
     static List<String> list;
 
     public static void main(String[] args) throws IOException {

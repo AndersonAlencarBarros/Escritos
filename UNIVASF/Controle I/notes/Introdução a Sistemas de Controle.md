@@ -42,8 +42,20 @@ Princípio da superposição é uma propriedade da Linearidade.
 
 ## Sistemas de Controle em Malha Fechada ou Sistemas com Realimentação
 
-A saída é medida e comparada com um valor desejado. 
+A saída é medida e comparada com um valor de entrada desejado., afim de corrigir eventuais erros.
+
+As saídas são as variáveis controladas
 
 ![image-20210313104600849](../attachments/image-20210313104600849.png)
 
 ![image-20210313104623500](../attachments/image-20210313104623500.png)
+
+**Zeros** são valores de *s* que fazem G(s) = 0
+
+Ou seja, leva o numerador a zero.
+
+Fazendo o limite, G(s) também pode ir a zero, fazendo com que o infinito também seja um zero
+
+**Polos** fazem G(s) ir para o infinito
+
+Ou seja, leva o denominador a zero

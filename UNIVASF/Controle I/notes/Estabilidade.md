@@ -1,4 +1,4 @@
-# Estabilidade
+# Estabilidade e Ações de Controle
 
 É considerável **instável** quando a resposta transitória é muito alta ou não desaparece
 

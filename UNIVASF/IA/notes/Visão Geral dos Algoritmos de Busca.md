@@ -1,9 +1,9 @@
-# Visão Geral
+# Visão Geral dos Algoritmos de Busca
 
 - **Busca sem Informação ou Busca Cega**
   - Busca em Largura
   - Busca em Profundidade
-- **Busca com Informação e Exploração** busca pelo melhor caminho
+- **Busca com Informação e Exploração** busca pelo melhor caminho. Os nós são ordenados por uma função de avaliação f(n)
   - **Busca Gulosa** expande o nó que parece mais próximo ao objetivo
   - **Busca A*** usa uma função heurística para encontrar o melhor caminho
 - **Algoritmos de Busca Local** usados para otimização onde o caminho é irrelevante e o estado objetivo é a solução
@@ -20,3 +20,6 @@
     - **Cruzamento (crossover)** pode ser um ponto, multipontos ou uniforme
     - **Mutação** inversão de bits com uma dada probabilidade
     - **Elitismo** o crossover ou mutação podem destruir a melhor solução, transfere uma cópia dos melhores em todas as gerações
+
+- **Busca Competitiva** busca de soma (um perde e outro ganha) zero envolvendo mais de um agente. Enquanto um jogador tenta maximizar, o outro tenta minimizar. 
+

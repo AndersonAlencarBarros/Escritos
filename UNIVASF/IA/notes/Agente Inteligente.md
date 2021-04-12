@@ -6,15 +6,15 @@
 
 **Programa do Agente** é a implementação do agente.
 
-A medida de desempenho é o critério de sucesso do comportamento do agente.
+A **medida de desempenho** é o critério de sucesso do comportamento do agente. Sequência de estados desejados.
 
 Um Agente racional deve ser autônomo, ele deve aprender e não depender do projetista.
 
 **Ambiente de Tarefas** são os problemas onde os agentes são as soluções.
 
-PEAS (Performance, Environment, Actuators, Sensors)
+**Especificando o Ambiente** PEAS (Performance, Environment, Actuators, Sensors)
 
-**Exemplo:** Robô Seletor de Peças
+Exemplo: Robô Seletor de Peças
 
 **P:** % de peças selecionadas corretamente  / taxa por minuto / respeitando normas de qualidade do produto
 

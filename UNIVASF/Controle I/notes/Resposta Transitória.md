@@ -14,4 +14,4 @@ Existem dois tipos básicos de resposta: de **primeira ordem** e **segunda ordem
 
 Primeira ordem são mais uniformes e não apresentam grandes surpresas
 
-Os de segunda ordem podem variar radicalmente com o valor dos parâmetros e podem ser classificados em superamortercido, criticamente amortecido e subamortecido depedendo do valor das raizes da equação característica (ou os polos do sistema)
+Os de segunda ordem podem variar radicalmente com o valor dos parâmetros e podem ser classificados em superamortecido, criticamente amortecido e subamortecido depedendo do valor das raízes da equação característica (ou os polos do sistema)

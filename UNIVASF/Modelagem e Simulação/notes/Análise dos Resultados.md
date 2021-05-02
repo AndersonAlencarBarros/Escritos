@@ -1,6 +1,6 @@
 # Análise dos Resultados
 
-**MML** dilui os transilente dividindo a simulação em lotes
+**MML** dilui os transiente dividindo a simulação em lotes
 
 **MRI** aproveita a parte estacionário da simulação. Apenas lotes no estado estacionário
 
@@ -14,13 +14,13 @@ Importância das variáveis `tsf, U, nf`
 
 Dois lados: **clientes** e **negócio**
 
-**tsf** porque é importante ao cliente, tempo de resposta. Tempo que o cliente pede e volta a ele. 99% do limite superior do intervalo de variancia
+**tsf** porque é importante ao cliente, tempo de resposta. Tempo que o cliente pede e volta a ele. 99% do limite superior do intervalo de variância
 
 Do lado do negócio
 
-**U** diz respeito ao servidor, não pode ser sobrecarregado. 90% do limite superior do intervalo de variancia
+**U** diz respeito ao servidor, não pode ser sobrecarregado. 90% do limite superior do intervalo de variância
 
-**nf** diz respeito a fila, ao buffer, é a memória e se lotar vai haver perdas. 90% do limite superior do intervalo de variancia
+**nf** diz respeito a fila, ao buffer, é a memória e se lotar vai haver perdas. 90% do limite superior do intervalo de variância
 
 Existe um intervalo de confiança, variância e média de `tsf, U e nf` para cada lote.
 
@@ -33,3 +33,7 @@ Existe um intervalo de confiança, variância e média de `tsf, U e nf` para cad
 Estatística para cada lote é calculado pelo software zi
 
 a variância e o intervalo de confiança é manual.
+
+**MRI** faz várias simulações, grandes o suficiente e aproveita a parte final de cada uma delas.
+
+**Estatística** é usada quando não existe uma lei que não se aplica.

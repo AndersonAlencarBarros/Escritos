@@ -2,7 +2,7 @@
 
 *Anderson de Alencar Barros*
 
-<img src="../attachments/1200px-Java.util.Collection_hierarchy.svg.png" style="zoom: 50%;" />
+<img title="" src="../attachments/1200px-Java.util.Collection_hierarchy.svg.png" alt="" style="zoom: 50%;" data-align="center" width="491">
 
 #### Sumário
 
@@ -42,7 +42,7 @@ import java.util.List;
 public class ArrayListExample {
     public static void main(String[] args) {
         // Declaração de um ArrayList
-    	List<String> nomes = new ArrayList<>();
+        List<String> nomes = new ArrayList<>();
     }
 }
 ```
@@ -85,7 +85,7 @@ import java.util.List;
 
 public class VectorExample {
     public static void main(String[] args) {
-        List<String> nomes = new Vector<>();		
+        List<String> nomes = new Vector<>();        
     }
 }
 ```
@@ -171,10 +171,10 @@ public class SetExample {
         notasAlunos.add(5.2);
         notasAlunos.add(1.1);
         notasAlunos.add(7.4);
-  	
+
         // remove passando um objeto como parâmetro
         notasAlunos.remove(1.1);
-	
+
         // iterar sobre o Set
         var it = notasAlunos.iterator();
         while (it.hasNext())
@@ -182,7 +182,7 @@ public class SetExample {
 
         for (var d : notasAlunos)
             System.out.println("-> " + d);
-		
+
         // limpa o Set
         notasAlunos.clear();
 
@@ -254,14 +254,13 @@ public class MapExample {
     public static void main(String[] args) {
         // Declaração
         Map<String, Integer> campeoes = new HashMap<>();
-        
+
         campeoes.put("Brasil", 5);
         campeoes.put("Alemanha", 4);
         campeoes.put("Itália", 4);
         campeoes.put("Argentina", 2);
     }
 }
-
 ```
 
 - `campeoes.put("Brasil", 5)`  adiciona ou atualiza valores
@@ -442,7 +441,7 @@ public class Main {
 
         // Só pode ser passado como parâmetro uma lista 
         // que implemente um objeto que estenda `Comparable`
-		Collections.sort(estudanteList);
+        Collections.sort(estudanteList);
 
         // Passando um `Comparator` como parâmetro
         // Desse modo, pode-se criar quantas regras preferir
@@ -472,14 +471,14 @@ public class OptionalExample {
         // cria um Optional, porém este não permite `null`
         // caso seja `null`, um `NullPointerException` é lançado
         Optional<String> opt = Optional.of("Valor Presente");
- 
+
         // cria um Optional, este método permite o valor `null`
         // caso seja `null`, cria-se um optional vazio
         Optional<String> optNull = Optional.ofNullable(null);
-         
+
         // cria um Optional vazio
         Optional<String> optEmpty = Optional.empty();
-         
+
         // Existem extensões do Optional para alguns tipos primitivos
         OptionalInt.of(10).ifPresent(System.out::println);
         OptionalDouble.of(10.0).ifPresent(System.out::println);
@@ -505,7 +504,7 @@ Alguns métodos dos `Optionals` são
 Traduzindo do [Javadoc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html), para realizar um cálculo, as streams são compostas de um *stream pipeline*. Um  *stream pipeline* consiste em: 
 
 - uma fonte (que pode ser uma matriz, uma coleção, uma função geradora, um canal de E/S, etc)
--  zero ou mais operações intermediárias (que transformam um fluxo em outro fluxo, como `filter()` ) 
+- zero ou mais operações intermediárias (que transformam um fluxo em outro fluxo, como `filter()` ) 
 - e uma operação de terminal (que produz um resultado ou efeito colateral, como `count()` ou `forEach (Consumer)`)
 
 Na `Streams` a computação nos dados de origem só é realizada quando uma operação `terminal` é iniciada e os elementos de origem são consumidos apenas conforme necessário. 
@@ -516,14 +515,14 @@ Para fazer uso da paralelização, basta trocar o método `stream()` por `parall
 
 **Principais Funcionalidades**
 
-| Função    | Definição                                                    |
-| --------- | ------------------------------------------------------------ |
-| Mapping   | retorna uma coleção com mesmo tamanho da origem com os elementos alterados |
+| Função    | Definição                                                                             |
+| --------- | ------------------------------------------------------------------------------------- |
+| Mapping   | retorna uma coleção com mesmo tamanho da origem com os elementos alterados            |
 | Filtering | retorna uma coleção igual ou menor que a coleção de origem, com os elementos intactos |
-| ForEach   | executa uma determinada lógica para cada elemento, retornando nada |
-| Peek      | executa uma determinada lógica para cada elemento, retornando a própria coleção |
-| Counting  | retorna um inteiro que representa o total de elementos       |
-| Grouping  | retorna uma coleção agrupara de acordo com a regra definida  |
+| ForEach   | executa uma determinada lógica para cada elemento, retornando nada                    |
+| Peek      | executa uma determinada lógica para cada elemento, retornando a própria coleção       |
+| Counting  | retorna um inteiro que representa o total de elementos                                |
+| Grouping  | retorna uma coleção agrupara de acordo com a regra definida                           |
 
 Considere uma lista de estudantes,
 
@@ -612,5 +611,3 @@ estudantes.stream().anyMatch((str) -> str.contains("W"));
 // retorna o primeiro elemento
 estudantes.stream().findFirst().ifPresent(System.out::println);
 ```
-
-

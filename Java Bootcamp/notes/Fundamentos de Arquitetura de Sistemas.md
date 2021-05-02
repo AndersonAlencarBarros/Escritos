@@ -49,7 +49,7 @@ XSD (XML Schema Definition) define a estrutura de dados que será validada no XM
 
 ### REST, API e JSON <a name="1.4"></a>
 
-REST (Representational State Transfer) trabalha com a transferência de objeto em determinado estado. Ao contrário do SOAP, não é um protocolo, é um estilo de arquitetura de software que define uma web service. Possível trabalhar com vários formatos e utiliza métodos HTTP para operações. Fácil compreensão.	
+REST (Representational State Transfer) trabalha com a transferência de objeto em determinado estado. Ao contrário do SOAP, não é um protocolo, é um estilo de arquitetura de software que define uma web service. Possível trabalhar com vários formatos e utiliza métodos HTTP para operações. Fácil compreensão.    
 
 API (Application Programming Interface) é uma aplicação web que disponibiliza rotinas e padrões por meio de serviços web para que outras aplicações consumam essas funcionalidades.
 

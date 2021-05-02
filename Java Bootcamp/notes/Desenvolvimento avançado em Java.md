@@ -17,7 +17,7 @@
 ## Paradigma Funcional no Java <a name="paradigma-funcional-no-java"></a>
 
 > Programação funcional é o processo de construir software através de composição de funções puras, evitando compartilhamento de estados, dados mutáveis e efeitos colaterais. É declarativa ao invés de imperativa.
->
+> 
 > Eric Elliott
 
 **Paradigma Imperativo** é aquele que expressa o código através de comandos ao computador, nele é possível ter controle do estados dos objetos.
@@ -88,7 +88,7 @@ public class LambdaExample {
         Funcao funcao = valor -> "Sr. " + valor;
         // Chamada da função lambda
         System.out.println(funcao.gerar("Anderson"));
-		
+
         // Quando a lambda tem mais de uma instrução, é necessário uso de chaves {}.
         // Se o return for diferente de void, é preciso especificar
         Funcao funcao1 = valor -> {
@@ -96,7 +96,7 @@ public class LambdaExample {
             String nome = prefixo + valor;
             return nome;
         };
-		
+
         System.out.println(funcao1.gerar("Ana"));
     }
 }
@@ -117,7 +117,7 @@ Recursão tem a desvantagem de consumir muita memória e com várias chamadas de
 
 ```java
 public static int fat(int v) {
- 	// caso base
+     // caso base
     if(v == 1) {
         return v;
     } else {
@@ -293,7 +293,7 @@ Também precisamos da classe que gera a barra de carregamento. As threads do `Ge
 ```java
 class BarradeCarregamento extends Thread {
     private Thread geradorPDF;
-	
+
     // Recebe a thread GeradorPDF
     public BarradeCarregamento(Thread geradorPDF) {
         this.geradorPDF = geradorPDF;
@@ -307,7 +307,7 @@ class BarradeCarregamento extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-			
+
             // verifica se a thread está ativa
             if (!geradorPDF.isAlive()) {
                 break;
@@ -324,7 +324,7 @@ Na `main`,
 public static void main(String[] args) { 
     GeradorPDF geradorPDF = new GeradorPDF();
     BarradeCarregamento barradeCarregamento = new BarradeCarregamento(geradorPDF);
-	
+
     // Chama a execução das threads
     geradorPDF.start();
     barradeCarregamento.start();
@@ -354,14 +354,14 @@ public class ParallelStreams {
         inicio = System.currentTimeMillis();
         IntStream.range(1, 100000).forEach(num -> fatorial(num));
         fim = System.currentTimeMillis();
-        
+
         System.out.println("Tempo de execução: " + (fim - inicio));
 
         // Paralelo
         inicio = System.currentTimeMillis();
         IntStream.range(1, 100000).parallel().forEach(num -> fatorial(num));
         fim = System.currentTimeMillis();
-        
+
         System.out.println("Tempo de execução Paralelo: " + (fim - inicio));
     }
 
@@ -491,4 +491,3 @@ System.out.println(alfabeto);
 String letra = "A";
 System.out.println(letra.repeat(10));
 ```
-

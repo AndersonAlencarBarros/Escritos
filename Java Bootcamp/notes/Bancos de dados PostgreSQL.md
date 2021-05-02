@@ -196,32 +196,32 @@ Deve-se tomar extremo cuidado com a role `SUPERUSER` por ter permissões quase i
 
 ```sql
 CREATE ROLE administradores
-	CREATEDB
-	CREATEROLE
-	INHERIT
-	NOLOGIN
-	REPLICATION
-	BYPASSRLS
-	CONNECTION LIMIT -1;
+    CREATEDB
+    CREATEROLE
+    INHERIT
+    NOLOGIN
+    REPLICATION
+    BYPASSRLS
+    CONNECTION LIMIT -1;
 ```
 
 ```sql
 CREATE ROLE professores
-	NOCREATEDB
-	NOCREATEROLE
-	INHERIT
-	NOLOGIN
-	NOBYPASSRLS
-	CONNECTION LIMIT 10;
+    NOCREATEDB
+    NOCREATEROLE
+    INHERIT
+    NOLOGIN
+    NOBYPASSRLS
+    CONNECTION LIMIT 10;
 ```
 
 ```sql
 CREATE ROLE alunos
-	NOCREATEDB
-	NOCREATEROLE
-	INHERIT
-	NOLOGIN
-	NOBYPASSRLS
+    NOCREATEDB
+    NOCREATEROLE
+    INHERIT
+    NOLOGIN
+    NOBYPASSRLS
     CONNECTION LIMIT 90;
 ```
 
@@ -231,9 +231,9 @@ Para a role assumir as permissões de outra role é necessário a opção `INHER
 
 No momento da criação da role
 
-​	`IN ROLE` a role passa a pertencer a role informada
+​    `IN ROLE` a role passa a pertencer a role informada
 
-​	`ROLE` a role informada passa a pertencera nova role
+​    `ROLE` a role informada passa a pertencera nova role
 
 Após a criação, existe o comando que define acesso a privilégios
 

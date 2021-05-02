@@ -62,7 +62,6 @@
 - `find <dir> -type f -name <nome>` busca um arquivo (`-type f`) em um diretório, o nome pode ser um padrão em Regex
 - `find <dir> -type d -name <nome>` busca por um diretório (`-type d`)
 
-
 - `touch` cria arquivos vazios 
 - `echo` imprime algo na saída
 
@@ -249,10 +248,13 @@ Junta vários arquivos em um só. Pode ser usado em conjunto com um compactador 
 Locais onde se pode baixar pacotes
 
 - [pkgs.org](https://pkgs.org/)
+
 - [rpm.pbone.net](http://rpm.pbone.net/)
 
 - `sudo dpkg -i <pacote.deb>` instala um pacote *.deb* 
+
 - `sudo dpkg -I <pacote.deb>` obtém informações de um pacote
+
 - `sudo dpkg -r <pacote>` remove um pacote *.deb*, usa-se o nome do pacote dado nas informações dele
 
 No Fedora,
@@ -271,5 +273,3 @@ No Fedora,
 - `portfolio=~/Documents/alencarbarros.github.io/` criando uma variável de ambiente `portfolio` com um caminho
 - `export portfolio` cria a variável de ambiente
 - `cd $portfolio` é possível ir até esse caminho com tal variável
-
-

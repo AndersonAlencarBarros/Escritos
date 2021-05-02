@@ -23,4 +23,3 @@ A inicialização rápida é útil em momentos que a aplicação "dorme" e não 
 **Proxy reverso** fica na ponta da arquitetura para fazer a conexão com o mundo exterior, é o único que se comunica internamente da aplicação.
 
 **Ingress** permite o ingresso da conectividade (internet) para dentro do cluster. 
-

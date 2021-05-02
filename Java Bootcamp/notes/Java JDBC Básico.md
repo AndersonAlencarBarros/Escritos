@@ -182,10 +182,10 @@ public class Aluno {
         this.idade = idade;
         this.estado = estado;
     }
-    
+
     public Aluno() {
     }
-    
+
     // Além de métodos getters e setters...
 ```
 
@@ -196,7 +196,7 @@ Para retornar uma lista de todos os alunos no banco,
 ```java
 public List<Aluno> getAlunosList() {
     List<Aluno> alunos = new ArrayList<>();
-	
+
     // Classe ConnectionFactory sendo usada 
     // para criar uma conexão do banco na variável 'conn'
     try(var conn = ConnectionFactory.getConnection()) {
@@ -204,7 +204,7 @@ public List<Aluno> getAlunosList() {
         PreparedStatement psrt = conn.prepareStatement("SELECT * FROM aluno");
         // Comando sendo executado pelo armazenado
         ResultSet rs = psrt.executeQuery();
-	
+
         // Com o next() podemos iterar sobre todos os resultados 
         // e com getters recebemos cada dado na tabela 
         // que é usado para instânciar objetos
@@ -274,7 +274,7 @@ Inserir um aluno no banco,
 
 ```java
 public void inserirAluno(Aluno aluno) {
-	try(var conn = ConnectionFactory.getConnection()) {
+    try(var conn = ConnectionFactory.getConnection()) {
         String sql = "INSERT INTO aluno(nome, idade, estado) VALUES (?, ?, ?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, aluno.getNome());
@@ -451,7 +451,7 @@ Aluno alunoParaAdicionar3 = new Aluno("Anderson", 23, "PE");
 Para adicionar no banco,
 
 ```java
-entityManager.getTransaction().begin();	// inicia a transação
+entityManager.getTransaction().begin();    // inicia a transação
 
 entityManager.persist(alunoParaAdicionar1);
 entityManager.persist(alunoParaAdicionar2);
@@ -565,4 +565,3 @@ List<Aluno> alunoJPQLList = entityManager
     .setParameter("estado", "PE")
     .getResultList();
 ```
-

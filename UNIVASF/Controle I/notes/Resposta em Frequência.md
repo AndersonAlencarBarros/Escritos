@@ -31,3 +31,21 @@ A distância à origem onde o gráfico corta o eixo real negativo é o módulo d
 
 **Margem de fase** ângulo $\beta$ entre o eixo real negativo e o vetor A(j$\omega$) onde o módulo do vetor é unitário. Se $\beta$ é positivo o sistema é estável.
 
+### Controlador por Avanço de Fase
+
+$$
+G_c(s) = \frac{K_c (s + \alpha a)}{s + a}
+$$
+
+onde $\alpha$ é o *fator de atenuação do compensador por avanço de fase* e $0 < \alpha < 1$
+
+$\phi_m$ margem de fase máxima em uma dada frequência. Vem das especificações do projeto.
+
+$$
+\alpha = \frac{1 - sen\phi_m}{1 + sen\phi_m}
+$$
+
+
+$$
+\omega_m = \textrm{a}\sqrt\alpha
+$$
